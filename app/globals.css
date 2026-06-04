@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base resets & defaults ─────────────────────────────────────────────── */
+@layer base {
+  :root {
+    /* CSS custom properties matching the brand palette */
+    --color-navy: #1b3a6b;
+    --color-terracotta: #d4622a;
+    --color-sage: #4a7c59;
+    --color-cream: #faf8f4;
+    --color-ink: #1a1a1a;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-ink;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  /* Heading defaults — use display font for h1–h3 */
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  h4,
+  h5,
+  h6 {
+    @apply font-body font-semibold;
+  }
+
+  /* Focus ring for keyboard navigation */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-terracotta;
+  }
+
+  /* Links default */
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* ─── Reusable utility classes ───────────────────────────────────────────── */
+@layer components {
+  /* Page section wrapper */
+  .section-wrapper {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Primary CTA button */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-terracotta text-white font-body font-semibold
+           px-6 py-3 rounded-lg
+           hover:bg-terracotta-600 active:bg-terracotta-700
+           transition-colors duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta;
+  }
+
+  /* Secondary (outline) button */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-navy text-navy font-body font-semibold
+           px-6 py-3 rounded-lg
+           hover:bg-navy hover:text-white
+           transition-colors duration-200
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy;
+  }
+
+  /* White outline button — for dark backgrounds */
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-white text-white font-body font-semibold
+           px-6 py-3 rounded-lg
+           hover:bg-white hover:text-navy
+           transition-colors duration-200;
+  }
+
+  /* Section heading styles */
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl text-navy font-bold leading-tight;
+  }
+
+  .section-subtitle {
+    @apply font-body text-lg text-ink/75 leading-relaxed;
+  }
+
+  /* Card base */
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-navy/10 p-6
+           hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* Bilingual divider */
+  .bilingual-divider {
+    @apply border-t border-sage/30 my-8 pt-8;
+  }
+}
