@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 }
 
 const eligibleGroups = [
-  { icon: '👨‍👩‍👧', label: 'Families with children' },
-  { icon: '👴', label: 'Seniors (65+)' },
-  { icon: '♿', label: 'Persons with disabilities' },
-  { icon: '👶', label: 'Children ages 0–18 (regardless of immigration status)' },
-  { icon: '🤰', label: 'Pregnant women' },
-  { icon: '🏥', label: 'People with tuberculosis, breast cancer, or HIV/AIDS' },
-  { icon: '👨‍👩‍👦', label: 'Foster care youth' },
-  { icon: '💰', label: 'Low-income adults' },
+  'Families with children',
+  'Seniors (65+)',
+  'Persons with disabilities',
+  'Children ages 0–18 (regardless of immigration status)',
+  'Pregnant women',
+  'People with tuberculosis, breast cancer, or HIV/AIDS',
+  'Foster care youth',
+  'Low-income adults',
 ]
 
 const immigrantCategories = [
@@ -39,7 +39,7 @@ export default function MediCalPage() {
     <>
       <HeroSection
         badge="Healthcare Enrollment"
-        headline="Medi-Cal Enrollment"
+        headline="Health coverage, within reach."
         subheadline="Medi-Cal is California's free or low-cost public health insurance for qualifying individuals and families. Welcome to America helps you find out if you qualify and enroll — at no charge."
         primaryCta={{ label: 'Call to Find Out If You Qualify', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
@@ -91,17 +91,26 @@ export default function MediCalPage() {
       <section className="py-16 bg-navy/5" aria-labelledby="qualify-heading">
         <div className="section-wrapper">
           <div className="max-w-4xl mx-auto">
-            <h2 id="qualify-heading" className="section-title text-center mb-10">
-              Who Qualifies for Medi-Cal?
+            <h2 id="qualify-heading" className="section-title mb-10">
+              Who qualifies for Medi-Cal?
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
               {eligibleGroups.map((group) => (
                 <div
-                  key={group.label}
-                  className="bg-white rounded-xl p-4 border border-navy/10 text-center shadow-sm"
+                  key={group}
+                  className="flex items-start gap-3 border-t border-ink/15 py-4"
                 >
-                  <div className="text-3xl mb-2" aria-hidden="true">{group.icon}</div>
-                  <p className="text-ink/75 text-sm leading-snug">{group.label}</p>
+                  <svg
+                    className="w-5 h-5 text-sage shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <p className="text-ink/80 leading-snug">{group}</p>
                 </div>
               ))}
             </div>
@@ -113,7 +122,7 @@ export default function MediCalPage() {
       <section className="py-16" aria-labelledby="immigrants-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="immigrants-heading" className="section-title mb-6">
-            Immigrants and Medi-Cal
+            Immigrants qualify, too.
           </h2>
           <p className="text-ink/75 leading-relaxed mb-6">
             Many immigrants qualify for Medi-Cal. California has expanded eligibility to
@@ -145,7 +154,7 @@ export default function MediCalPage() {
       <section className="py-16 bg-navy/5" aria-labelledby="plans-heading">
         <div className="section-wrapper max-w-4xl mx-auto">
           <h2 id="plans-heading" className="section-title text-center mb-4">
-            Health Plans We Enroll
+            Plans we enroll.
           </h2>
           <p className="text-center text-ink/60 mb-8">
             We help enroll you into the right managed care plan for your county.
@@ -167,14 +176,13 @@ export default function MediCalPage() {
       <section className="py-14" aria-labelledby="related-heading">
         <div className="section-wrapper">
           <h2 id="related-heading" className="section-title text-center mb-8">
-            Related Healthcare Programs
+            Related programs.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <Link
               href="/medi-cal/medicare"
               className="card hover:border-navy/30 group flex items-start gap-4"
             >
-              <span className="text-3xl" aria-hidden="true">🏥</span>
               <div>
                 <h3 className="font-display text-xl text-navy font-semibold mb-1 group-hover:text-terracotta transition-colors">
                   Medicare
@@ -188,7 +196,6 @@ export default function MediCalPage() {
               href="/medi-cal/covered-ca"
               className="card hover:border-navy/30 group flex items-start gap-4"
             >
-              <span className="text-3xl" aria-hidden="true">📋</span>
               <div>
                 <h3 className="font-display text-xl text-navy font-semibold mb-1 group-hover:text-terracotta transition-colors">
                   Covered California
@@ -204,9 +211,8 @@ export default function MediCalPage() {
       </section>
 
       <CTABanner
-        heading="Find Out If You Qualify for Medi-Cal"
+        heading="Find out if you qualify."
         subtext="Call or text us today. Our team will review your situation and help you enroll — at no cost to you."
-        variant="sage"
       />
     </>
   )

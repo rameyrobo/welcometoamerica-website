@@ -11,37 +11,31 @@ export const metadata: Metadata = {
 
 const classTopics = [
   {
-    icon: '📜',
     title: 'U.S. History',
     description:
       'Learn about key events, founding documents, wars, civil rights movements, and the history that shaped the United States.',
   },
   {
-    icon: '🏛️',
     title: 'Civics & Government',
     description:
       'Understand the three branches of government, how laws are made, the Bill of Rights, and how democracy works in the United States.',
   },
   {
-    icon: '🗣️',
     title: 'English Language Skills',
     description:
       'Build reading, writing, and speaking skills needed for the USCIS interview, with practice on vocabulary and sentences used during naturalization.',
   },
   {
-    icon: '📝',
     title: 'USCIS 100 Questions',
     description:
       'Study all 100 official USCIS civics questions and answers. Practice until you can confidently answer at least 6 of the 10 questions asked during your interview.',
   },
   {
-    icon: '🎤',
     title: 'Mock Interviews',
     description:
       'Participate in practice interviews that simulate what you will experience at your actual USCIS naturalization interview — so there are no surprises.',
   },
   {
-    icon: '📋',
     title: 'Application Walkthrough',
     description:
       'Get help understanding Form N-400 (Application for Naturalization) and how to answer each question accurately and completely.',
@@ -53,7 +47,7 @@ export default function CitizenshipClassesPage() {
     <>
       <HeroSection
         badge="Immigration Services · Education"
-        headline="Citizenship Classes"
+        headline="Walk into your interview ready."
         subheadline="Preparing for your naturalization interview? Our citizenship classes help you study U.S. history, civics, and English — everything you need to pass your USCIS interview with confidence."
         primaryCta={{ label: 'Call 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
@@ -75,7 +69,7 @@ export default function CitizenshipClassesPage() {
       <section className="py-16 sm:py-20" aria-labelledby="cc-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="cc-heading" className="section-title mb-6">
-            Prepare to Become a U.S. Citizen
+            Prepare to become a U.S. citizen.
           </h2>
           <div className="space-y-4 text-ink/75 leading-relaxed">
             <p>
@@ -98,17 +92,12 @@ export default function CitizenshipClassesPage() {
 
           {/* Availability callout */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { icon: '📞', label: 'By Phone' },
-              { icon: '💻', label: 'Online / Zoom' },
-              { icon: '🏫', label: 'In-Person' },
-            ].map((item) => (
+            {['By phone', 'Online / Zoom', 'In person'].map((label) => (
               <div
-                key={item.label}
-                className="flex items-center gap-3 bg-navy/5 rounded-xl px-5 py-4 border border-navy/10"
+                key={label}
+                className="bg-navy/5 rounded-xl px-5 py-4 border border-navy/10 text-center"
               >
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                <span className="font-body font-semibold text-navy">{item.label}</span>
+                <span className="font-body font-semibold text-navy">{label}</span>
               </div>
             ))}
           </div>
@@ -119,13 +108,12 @@ export default function CitizenshipClassesPage() {
       <section className="py-16 bg-navy/5" aria-labelledby="topics-heading">
         <div className="section-wrapper">
           <h2 id="topics-heading" className="section-title text-center mb-10">
-            What Our Classes Cover
+            What our classes cover.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {classTopics.map((topic) => (
               <div key={topic.title} className="card">
-                <div className="text-3xl mb-3" aria-hidden="true">{topic.icon}</div>
-                <h3 className="font-display text-lg text-navy font-semibold mb-2">
+                <h3 className="font-display text-xl text-navy font-medium mb-2">
                   {topic.title}
                 </h3>
                 <p className="text-ink/70 text-sm leading-relaxed">{topic.description}</p>
@@ -140,7 +128,7 @@ export default function CitizenshipClassesPage() {
         <div className="section-wrapper max-w-3xl mx-auto">
           <div className="bg-white border border-navy/15 rounded-xl p-7 shadow-sm">
             <h2 id="resources-heading" className="font-display text-2xl text-navy font-semibold mb-4">
-              Official USCIS Study Materials
+              Official USCIS study materials.
             </h2>
             <p className="text-ink/70 leading-relaxed mb-5">
               USCIS provides free official study materials for the naturalization test. We
@@ -159,9 +147,8 @@ export default function CitizenshipClassesPage() {
       </section>
 
       <CTABanner
-        heading="Sign Up for Citizenship Classes"
+        heading="Class starts when you call."
         subtext="Call or text us to get started. Classes available by phone, online, and in person."
-        variant="navy"
       />
     </>
   )

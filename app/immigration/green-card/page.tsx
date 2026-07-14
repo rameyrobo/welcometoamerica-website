@@ -11,26 +11,22 @@ export const metadata: Metadata = {
 
 const greenCardCategories = [
   {
-    icon: '👨‍👩‍👧',
-    title: 'Family-Based Green Card',
+    title: 'Family-based green card',
     description:
       'U.S. citizens and lawful permanent residents can petition for certain family members to obtain permanent residence. Immediate relatives of U.S. citizens (spouses, unmarried children under 21, and parents) receive priority.',
   },
   {
-    icon: '💼',
-    title: 'Employment-Based Green Card',
+    title: 'Employment-based green card',
     description:
       'Individuals with qualifying job offers, extraordinary abilities, advanced degrees, or who are priority workers may be eligible for an employment-based green card through their employer or through self-petition.',
   },
   {
-    icon: '🛡️',
-    title: 'Refugee or Asylee Status',
+    title: 'Refugee or asylee status',
     description:
       'Refugees and asylees who have been in the U.S. for at least one year may be eligible to adjust their status to lawful permanent residence.',
   },
   {
-    icon: '🌍',
-    title: 'Special Immigrant Categories',
+    title: 'Special immigrant categories',
     description:
       'Certain individuals may qualify under special immigrant categories, including religious workers, certain broadcasters, employees of international organizations, and others.',
   },
@@ -51,7 +47,7 @@ export default function GreenCardPage() {
     <>
       <HeroSection
         badge="Immigration Legal Services"
-        headline="Green Card (Lawful Permanent Residence)"
+        headline="A permanent home starts with the right help."
         subheadline="A green card gives you the right to live and work permanently in the United States. Our DOJ-authorized representatives can help you understand your options and guide you through the application process."
         primaryCta={{ label: 'Call 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
@@ -73,7 +69,7 @@ export default function GreenCardPage() {
       <section className="py-16 sm:py-20" aria-labelledby="gc-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="gc-heading" className="section-title mb-6">
-            What is a Green Card?
+            What is a green card?
           </h2>
           <div className="space-y-4 text-ink/75 leading-relaxed">
             <p>
@@ -99,17 +95,21 @@ export default function GreenCardPage() {
       {/* ── Categories ──────────────────────────────────────────────────── */}
       <section className="py-16 bg-navy/5" aria-labelledby="categories-heading">
         <div className="section-wrapper">
-          <h2 id="categories-heading" className="section-title text-center mb-10">
-            Ways to Obtain a Green Card
+          <h2 id="categories-heading" className="section-title mb-12 max-w-4xl mx-auto">
+            Four paths to a green card.
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {greenCardCategories.map((cat) => (
-              <div key={cat.title} className="card">
-                <div className="text-3xl mb-3" aria-hidden="true">{cat.icon}</div>
-                <h3 className="font-display text-xl text-navy font-semibold mb-2">
-                  {cat.title}
-                </h3>
-                <p className="text-ink/70 text-sm leading-relaxed">{cat.description}</p>
+          <div className="max-w-4xl mx-auto space-y-8">
+            {greenCardCategories.map((cat, i) => (
+              <div key={cat.title} className="border-t border-ink/15 pt-5 flex gap-6">
+                <span className="font-display text-terracotta-700 text-lg w-8 shrink-0" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3 className="font-display text-2xl text-navy font-medium mb-2">
+                    {cat.title}
+                  </h3>
+                  <p className="text-ink/70 leading-relaxed">{cat.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default function GreenCardPage() {
       <section className="py-16" aria-labelledby="steps-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="steps-heading" className="section-title mb-6">
-            General Application Process
+            How the process works.
           </h2>
           <p className="text-ink/70 leading-relaxed mb-8">
             Every green card application is different depending on your category, current
@@ -131,7 +131,7 @@ export default function GreenCardPage() {
             {generalSteps.map((step, i) => (
               <li key={i} className="flex items-start gap-4">
                 <span
-                  className="shrink-0 w-8 h-8 rounded-full bg-terracotta text-white text-sm font-bold flex items-center justify-center"
+                  className="shrink-0 w-8 h-8 rounded-full bg-terracotta text-ink text-sm font-bold flex items-center justify-center"
                   aria-hidden="true"
                 >
                   {i + 1}
@@ -144,9 +144,8 @@ export default function GreenCardPage() {
       </section>
 
       <CTABanner
-        heading="Questions About Your Green Card Application?"
+        heading="Questions about your application?"
         subtext="Our DOJ-authorized representatives are here to help. Call or text us today — services in English, Spanish, and Arabic."
-        variant="navy"
       />
     </>
   )

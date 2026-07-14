@@ -330,7 +330,7 @@ export default function Navbar() {
               <li className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
                 <a
                   href="tel:8449826374"
-                  className="block px-4 py-3 bg-terracotta text-white font-semibold rounded text-sm text-center"
+                  className="block px-4 py-3 bg-terracotta text-ink font-bold rounded-full text-sm text-center"
                 >
                   📞 Call: 844-982-6374
                 </a>

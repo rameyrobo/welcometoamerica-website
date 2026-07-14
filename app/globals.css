@@ -6,10 +6,10 @@
 @layer base {
   :root {
     /* CSS custom properties matching the brand palette */
-    --color-navy: #1b3a6b;
-    --color-terracotta: #d4622a;
+    --color-navy: #215e61; /* deep teal — token name kept for compatibility */
+    --color-terracotta: #d7630b; /* warm orange */
     --color-sage: #4a7c59;
-    --color-cream: #faf8f4;
+    --color-cream: #faf7f1;
     --color-ink: #1a1a1a;
   }
 
@@ -53,12 +53,15 @@
     @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Primary CTA button */
+  /* Primary CTA button — pill with small-caps label (pairteam style).
+     Ink label: white on #D7630B is 3.7:1 (fails AA for 14px text);
+     ink passes at 4.71:1. */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
-           bg-terracotta text-white font-body font-semibold
-           px-6 py-3 rounded-lg
-           hover:bg-terracotta-600 active:bg-terracotta-700
+           bg-terracotta text-ink font-body font-bold
+           text-sm uppercase tracking-[0.12em]
+           px-7 py-3.5 rounded-full
+           hover:bg-terracotta-400 active:bg-terracotta-600
            transition-colors duration-200
            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta;
   }
@@ -66,8 +69,9 @@
   /* Secondary (outline) button */
   .btn-secondary {
     @apply inline-flex items-center justify-center gap-2
-           border-2 border-navy text-navy font-body font-semibold
-           px-6 py-3 rounded-lg
+           border border-navy text-navy font-body font-semibold
+           text-sm uppercase tracking-[0.12em]
+           px-7 py-3.5 rounded-full
            hover:bg-navy hover:text-white
            transition-colors duration-200
            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy;
@@ -76,25 +80,39 @@
   /* White outline button — for dark backgrounds */
   .btn-outline-white {
     @apply inline-flex items-center justify-center gap-2
-           border-2 border-white text-white font-body font-semibold
-           px-6 py-3 rounded-lg
+           border border-white text-white font-body font-semibold
+           text-sm uppercase tracking-[0.12em]
+           px-7 py-3.5 rounded-full
            hover:bg-white hover:text-navy
            transition-colors duration-200;
   }
 
-  /* Section heading styles */
+  /* Quiet text link with arrow — pairteam's "Do I qualify? →" pattern */
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-body font-semibold
+           text-navy underline decoration-navy/30 underline-offset-4
+           hover:decoration-navy transition-all;
+  }
+
+  /* Small uppercase eyebrow above headings — deeper orange stop for
+     readable contrast on cream (the bright 500 is reserved for fills) */
+  .eyebrow {
+    @apply block font-body font-semibold text-xs uppercase tracking-[0.18em] text-terracotta-700 mb-4;
+  }
+
+  /* Section heading styles — large, medium-weight editorial serif */
   .section-title {
-    @apply font-display text-3xl sm:text-4xl text-navy font-bold leading-tight;
+    @apply font-display text-4xl sm:text-5xl text-navy font-medium leading-[1.08] tracking-tight;
   }
 
   .section-subtitle {
-    @apply font-body text-lg text-ink/75 leading-relaxed;
+    @apply font-body text-lg text-ink/70 leading-relaxed;
   }
 
-  /* Card base */
+  /* Card base — soft, calm, minimal shadow */
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-navy/10 p-6
-           hover:shadow-md transition-shadow duration-200;
+    @apply bg-white rounded-2xl border border-ink/10 p-8
+           transition-shadow duration-200 hover:shadow-md;
   }
 
   /* Bilingual divider */

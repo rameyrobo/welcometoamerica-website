@@ -61,7 +61,7 @@ export default function ImmigrationPage() {
     <>
       <HeroSection
         badge="DOJ Authorized · Immigration Legal Services"
-        headline="Immigration Legal Services"
+        headline="Legal help you can trust, for a journey that matters."
         subheadline="Welcome to America is authorized by the Department of Justice to provide legal advice, assistance with immigration forms, and legal representation at the Department of Homeland Security (DHS)."
         primaryCta={{ label: 'Call 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
@@ -96,11 +96,9 @@ export default function ImmigrationPage() {
       <section className="py-16 sm:py-20" aria-labelledby="citizenship-heading">
         <div className="section-wrapper">
           <div className="max-w-3xl mx-auto">
-            <span className="inline-block text-terracotta font-body font-semibold text-sm uppercase tracking-wide mb-3">
-              Naturalization
-            </span>
+            <span className="eyebrow">Naturalization</span>
             <h2 id="citizenship-heading" className="section-title mb-4">
-              U.S. Citizenship Eligibility Requirements
+              Who can apply for U.S. citizenship?
             </h2>
             <p className="text-ink/70 leading-relaxed mb-8">
               To apply for U.S. citizenship through naturalization, you generally must meet the
@@ -130,7 +128,7 @@ export default function ImmigrationPage() {
         <div className="section-wrapper">
           <div className="max-w-3xl mx-auto">
             <h2 id="reasons-heading" className="section-title mb-4">
-              Important Reasons to Become a U.S. Citizen
+              Why citizenship is worth it.
             </h2>
             <p className="text-ink/70 leading-relaxed mb-8">
               Citizenship provides lasting security and opens doors that permanent residency alone
@@ -157,7 +155,7 @@ export default function ImmigrationPage() {
         <div className="section-wrapper">
           <div className="max-w-3xl mx-auto">
             <h2 id="interview-heading" className="section-title mb-6">
-              Naturalization Interview and Test
+              The interview and test, explained.
             </h2>
             <div className="space-y-5 text-ink/75 leading-relaxed">
               <p>
@@ -193,17 +191,14 @@ export default function ImmigrationPage() {
         <div className="section-wrapper">
           <div className="max-w-4xl mx-auto">
             <h2 id="rights-heading" className="section-title text-center mb-10">
-              Rights &amp; Responsibilities of Citizenship
+              What citizenship gives you — and asks of you.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Rights */}
               <div className="bg-white rounded-xl p-6 border border-navy/10 shadow-sm">
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="text-2xl" aria-hidden="true">🗽</span>
-                  <h3 className="font-display text-xl font-semibold text-navy">
-                    Your Rights
-                  </h3>
-                </div>
+                <h3 className="font-display text-2xl font-medium text-navy mb-5 pb-4 border-b border-ink/10">
+                  Your rights
+                </h3>
                 <ul className="space-y-3">
                   {citizenRights.map((right, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-ink/80">
@@ -216,12 +211,9 @@ export default function ImmigrationPage() {
 
               {/* Responsibilities */}
               <div className="bg-white rounded-xl p-6 border border-navy/10 shadow-sm">
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="text-2xl" aria-hidden="true">🤝</span>
-                  <h3 className="font-display text-xl font-semibold text-navy">
-                    Your Responsibilities
-                  </h3>
-                </div>
+                <h3 className="font-display text-2xl font-medium text-navy mb-5 pb-4 border-b border-ink/10">
+                  Your responsibilities
+                </h3>
                 <ul className="space-y-3">
                   {citizenResponsibilities.map((resp, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-ink/80">
@@ -237,9 +229,8 @@ export default function ImmigrationPage() {
       </section>
 
       <CTABanner
-        heading="Ready to Start Your Citizenship Journey?"
+        heading="Ready when you are."
         subtext="Call or text us today. Our DOJ-authorized representatives will guide you through every step of the process."
-        variant="navy"
       />
     </>
   )

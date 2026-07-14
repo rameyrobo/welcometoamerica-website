@@ -41,7 +41,7 @@ export default function FeeWaiverPage() {
     <>
       <HeroSection
         badge="Immigration Legal Services"
-        headline="Immigration Fee Waiver"
+        headline="Cost shouldn't decide your future."
         subheadline="USCIS filing fees can be a barrier. If you qualify, you may be able to have fees waived for many immigration applications. Our team can help you determine eligibility and prepare your request."
         primaryCta={{ label: 'Call 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
@@ -63,7 +63,7 @@ export default function FeeWaiverPage() {
       <section className="py-16 sm:py-20" aria-labelledby="fw-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="fw-heading" className="section-title mb-6">
-            What is a Fee Waiver?
+            What is a fee waiver?
           </h2>
           <div className="space-y-4 text-ink/75 leading-relaxed">
             <p>
@@ -101,7 +101,7 @@ export default function FeeWaiverPage() {
         <div className="section-wrapper">
           <div className="max-w-3xl mx-auto">
             <h2 id="qualify-heading" className="section-title mb-8">
-              Who May Qualify for a Fee Waiver?
+              Three ways to qualify.
             </h2>
             <div className="space-y-5">
               {qualifyingConditions.map((cond, i) => (
@@ -127,7 +127,7 @@ export default function FeeWaiverPage() {
       <section className="py-16" aria-labelledby="forms-heading">
         <div className="section-wrapper max-w-3xl mx-auto">
           <h2 id="forms-heading" className="section-title mb-6">
-            Common Forms That May Have Fees Waived
+            Forms that may have fees waived.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {commonForms.map((item) => (
@@ -150,9 +150,8 @@ export default function FeeWaiverPage() {
       </section>
 
       <CTABanner
-        heading="Need Help with a Fee Waiver?"
-        subtext="Call or text us to find out if you qualify. Our team will walk you through the process at no cost."
-        variant="terracotta"
+        heading="Find out if you qualify."
+        subtext="Call or text us today. Our team will walk you through the fee waiver process at no cost."
       />
     </>
   )

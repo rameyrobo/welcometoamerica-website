@@ -1,16 +1,15 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
+import { Fraunces, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import PageCTAButtons from '@/components/PageCTAButtons'
 
-// Display font — dignified, warm headlines
-const playfair = Playfair_Display({
+// Display font — warm editorial serif in the pairteam mold
+const fraunces = Fraunces({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-playfair', // keep the CSS var name so nothing else changes
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
 })
 
 // Body font — highly legible, accessible, humanist
@@ -56,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${sourceSans.variable}`}>
+    <html lang="en" className={`${fraunces.variable} ${sourceSans.variable}`}>
       <body className="bg-cream text-ink font-body antialiased">
         {/* Skip to main content — keyboard accessibility */}
         <a
@@ -71,9 +70,6 @@ export default function RootLayout({
         <main id="main-content" className="min-h-screen">
           {children}
         </main>
-
-        {/* Persistent CTAs — shown above footer on every page */}
-        <PageCTAButtons />
 
         <Footer />
       </body>

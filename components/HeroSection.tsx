@@ -8,14 +8,15 @@ interface HeroSectionProps {
   secondaryCta?: { label: string; href: string }
   showPhone?: boolean
   badge?: string
-  /**
-   * Optional Unsplash (or any) image URL to use as a background.
-   * Overlaid with a dark gradient for legibility.
-   */
+  /** Optional image URL used as a full-bleed background with a dark wash. */
   imageUrl?: string
   imageAlt?: string
 }
 
+/**
+ * Full-bleed editorial hero (pairteam-style): large sentence-case serif
+ * statement over warm photography, two pill CTAs, quiet contact row.
+ */
 export default function HeroSection({
   headline,
   subheadline,
@@ -27,64 +28,53 @@ export default function HeroSection({
   imageAlt = 'Community',
 }: HeroSectionProps) {
   return (
-    <section className="bg-navy relative overflow-hidden" aria-labelledby="hero-headline">
-      {/* Background image with overlay */}
+    <section className="bg-navy-800 relative overflow-hidden" aria-labelledby="hero-headline">
       {imageUrl && (
         <>
           <Image
             src={imageUrl}
             alt={imageAlt}
             fill
-            className="object-cover object-center opacity-30"
+            className="object-cover object-center"
             priority
             sizes="100vw"
           />
-          {/* Gradient overlay for readability */}
+          {/* Single soft wash, bottom-weighted — lets the photo breathe */}
           <div
-            className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60"
+            className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/60 to-navy-900/30"
             aria-hidden="true"
           />
         </>
       )}
 
-      {/* Decorative circles (shown when no image) */}
-      {!imageUrl && (
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-terracotta/10" />
-          <div className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-sage/10" />
-        </div>
-      )}
-
-      <div className="section-wrapper relative py-20 sm:py-28">
-        <div className="max-w-2xl">
+      <div className="section-wrapper relative pt-28 pb-16 sm:pt-40 sm:pb-20">
+        <div className="max-w-3xl">
           {badge && (
-            <div className="inline-flex items-center gap-2 mb-5">
-              <span className="bg-terracotta/20 border border-terracotta/40 text-terracotta-200 text-sm font-body font-semibold px-4 py-1.5 rounded-full">
-                {badge}
-              </span>
-            </div>
+            <p className="font-body font-semibold text-xs uppercase tracking-[0.18em] text-white/80 mb-6">
+              {badge}
+            </p>
           )}
 
           <h1
             id="hero-headline"
-            className="font-display text-4xl sm:text-5xl lg:text-6xl text-white font-bold leading-tight mb-6"
+            className="font-display text-5xl sm:text-6xl lg:text-7xl text-white font-medium leading-[1.04] tracking-tight mb-6"
           >
             {headline}
           </h1>
 
-          <p className="font-body text-lg sm:text-xl text-white/80 leading-relaxed mb-8">
+          <p className="font-body text-lg sm:text-xl text-white/85 leading-relaxed mb-9 max-w-2xl">
             {subheadline}
           </p>
 
           {(primaryCta || secondaryCta) && (
-            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+            <div className="flex flex-col sm:flex-row gap-3 mb-10">
               {primaryCta && (
-                <Link href={primaryCta.href} className="btn-primary text-base px-8 py-4">
+                <Link href={primaryCta.href} className="btn-primary">
                   {primaryCta.label}
                 </Link>
               )}
               {secondaryCta && (
-                <Link href={secondaryCta.href} className="btn-outline-white text-base px-8 py-4">
+                <Link href={secondaryCta.href} className="btn-outline-white">
                   {secondaryCta.label}
                 </Link>
               )}
@@ -95,15 +85,15 @@ export default function HeroSection({
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-white/70">
               <a
                 href="tel:8449826374"
-                className="flex items-center gap-2 text-white font-semibold hover:text-terracotta-200 transition-colors text-lg"
+                className="flex items-center gap-2 text-white font-semibold hover:text-terracotta-200 transition-colors"
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
                 844-WTAMERICA (844-982-6374)
               </a>
-              <span className="text-white/40 hidden sm:block">|</span>
-              <a href="sms:5624725246" className="flex items-center gap-2 text-white/70 hover:text-white transition-colors">
+              <span className="text-white/30 hidden sm:block">·</span>
+              <a href="sms:5624725246" className="flex items-center gap-2 hover:text-white transition-colors">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
                 </svg>

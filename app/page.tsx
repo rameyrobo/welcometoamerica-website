@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
-import ServiceCard from '@/components/ServiceCard'
 import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
@@ -10,49 +10,87 @@ export const metadata: Metadata = {
     'Free and low-cost immigration legal services, community health workers, and Medi-Cal enrollment. DOJ Recognized Nonprofit serving Southern California.',
 }
 
+/* ── All nine services from the client's list — numbered, pairteam-style ── */
 const services = [
   {
-    icon: '⚖️',
-    title: 'Immigration Legal Services',
+    title: 'Immigration legal advice',
     description:
-      'DOJ-accredited representatives provide legal advice, help with immigration forms, and represent you at the Department of Homeland Security (DHS).',
+      'Sit down with a DOJ Accredited Representative for honest, affordable legal advice about your immigration options — citizenship, green cards, fee waivers, and more.',
     href: '/immigration',
-    accent: 'navy' as const,
   },
   {
-    icon: '🏥',
-    title: 'Community Health Workers',
+    title: 'Immigration case support',
     description:
-      'Free with Medi-Cal. Our health workers connect you to care, help you enroll in health plans, translate for providers, and support you through every step.',
+      'From preparing forms to gathering evidence and tracking deadlines, we support your case at every step and represent you before the Department of Homeland Security.',
+    href: '/immigration',
+  },
+  {
+    title: 'Immigrant accompaniment',
+    description:
+      'You never have to face an appointment alone. We accompany community members to immigration appointments, hearings, and interviews.',
+    href: '/immigration',
+  },
+  {
+    title: 'Immigration fraud victim support',
+    description:
+      'If a notario or consultant took advantage of you, we help you understand your rights, report the fraud, and get your case back on track.',
+    href: '/immigration',
+  },
+  {
+    title: 'Community health workers',
+    description:
+      'Free with Medi-Cal: a trusted health worker who connects you to care, translates for providers, and walks with you through the healthcare system.',
     href: '/community-health',
-    accent: 'sage' as const,
   },
   {
-    icon: '📋',
-    title: 'Medi-Cal & Medicare Enrollment',
+    title: 'Healthcare advocacy',
     description:
-      'We assist with enrolling in Medi-Cal, Medicare, and Covered California in English, Spanish, and Arabic — at no cost to you.',
+      'We help you understand your healthcare rights and connect you to housing, food, and social service resources in your community.',
+    href: '/community-health',
+  },
+  {
+    title: 'Medi-Cal & Medicare enrollment',
+    description:
+      'Enrollment help for Medi-Cal, Medicare, IEHP, Molina, and Covered California — in English, Spanish, and Arabic, at no cost to you.',
     href: '/medi-cal',
-    accent: 'terracotta' as const,
   },
   {
-    icon: '🤝',
-    title: 'Healthcare Advocacy & Navigation',
+    title: 'Emergency room & hospital assistance',
     description:
-      'We help you understand your rights, navigate the healthcare system, and connect to housing, food, and social service resources.',
+      'When a health emergency and an immigration concern collide, we help you navigate both — at the ER, in the hospital, and after discharge.',
     href: '/community-health',
-    accent: 'sage' as const,
+  },
+  {
+    title: 'Citizenship classes',
+    description:
+      'Free citizenship classes in English and Spanish (Clases de Ciudadanía) to prepare you for your naturalization interview and civics test.',
+    href: '/immigration',
+  },
+]
+
+const pillars = [
+  {
+    title: 'Recognized by the Department of Justice',
+    body: 'We are a DOJ Recognized Organization with Accredited Representatives — authorized to give legal advice, prepare immigration forms, and represent you before DHS. Real accountability, not a notario.',
+  },
+  {
+    title: 'From the community, for the community',
+    body: 'As a 501(c)(3) community-based organization, we serve in English, Español, and العربية. Our community health workers and representatives live where you live.',
+  },
+  {
+    title: 'Free and low-cost, always',
+    body: 'Community health worker services are free with Medi-Cal. Immigration services are offered at nonprofit rates, with fee waivers when you qualify. Care first, cost second.',
   },
 ]
 
 export default function HomePage() {
   return (
     <>
-      {/* ── Hero ───────────────────────────────────────────────────────────── */}
+      {/* ── Hero — full-bleed statement ─────────────────────────────────── */}
       <HeroSection
-        badge="DOJ Recognized Nonprofit · Free & Low-Cost Services"
-        headline="Your Community. Your Rights. Your Future."
-        subheadline="Welcome to America is a Department of Justice Recognized nonprofit providing immigration legal services, community health workers, and healthcare enrollment — free or low cost."
+        badge="DOJ Recognized Organization · Nonprofit 501(c)(3) · Community Based"
+        headline="Help for your whole journey."
+        subheadline="Immigration legal services, community health workers, and healthcare enrollment for Southern California — from a nonprofit your community already trusts. Free or low cost, in English, Español, and العربية."
         primaryCta={{ label: 'Get Immigration Help', href: '/immigration' }}
         secondaryCta={{ label: 'Find a Health Worker', href: '/community-health' }}
         showPhone
@@ -60,98 +98,168 @@ export default function HomePage() {
         imageAlt="Diverse community members together"
       />
 
-      {/* ── Trust bar ──────────────────────────────────────────────────────── */}
-      <div className="bg-sage">
-        <div className="section-wrapper py-3.5">
-          <ul
-            className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2"
-            aria-label="Trust indicators"
-          >
-            {[
-              '✓ DOJ Recognized',
-              '✓ Nonprofit 501(c)3',
-              '✓ English / Español / العربية',
-              '✓ Free & Low-Cost',
-            ].map((badge) => (
-              <li key={badge} className="text-white font-body font-semibold text-sm">
-                {badge}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* ── Services grid ──────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20" aria-labelledby="services-heading">
+      {/* ── Statement intro ─────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-28" aria-labelledby="intro-heading">
         <div className="section-wrapper">
-          <div className="text-center mb-12">
-            <h2 id="services-heading" className="section-title mb-4">
-              How We Can Help You
+          <div className="max-w-3xl">
+            <h2 id="intro-heading" className="section-title mb-6">
+              Addressing what matters most, first.
             </h2>
-            <p className="section-subtitle max-w-2xl mx-auto">
-              Free and low-cost services for immigrants, families, and communities
-              across Southern California.
+            <p className="section-subtitle mb-8">
+              Immigration paperwork and healthcare shouldn&apos;t be a maze you walk
+              alone. Welcome to America connects your legal case, your health
+              coverage, and your everyday needs through one dedicated team of DOJ
+              Accredited Representatives and community health workers — recognized
+              by the Department of Justice, rooted in your community.
             </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((svc) => (
-              <ServiceCard key={svc.title} {...svc} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── About teaser ──────────────────────────────────────────────────── */}
-      <section className="py-16 bg-navy/5" aria-labelledby="about-teaser-heading">
-        <div className="section-wrapper">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-block text-terracotta font-body font-semibold text-sm uppercase tracking-wide mb-3">
-                Who We Are
-              </span>
-              <h2 id="about-teaser-heading" className="section-title mb-6">
-                A Nonprofit You Can Trust
-              </h2>
-              <p className="text-ink/75 leading-relaxed mb-4">
-                Welcome to America is a Nonprofit Organization Recognized by the
-                Department of Justice, authorized to provide legal advice,
-                assistance with immigration forms, and legal representation at
-                the Department of Homeland Security (DHS).
-              </p>
-              <p className="text-ink/75 leading-relaxed mb-6">
-                We also provide assistance with Medicare, Medi-Cal, and Covered
-                California plans. Bank-grade security protects your personal
-                data. We pride ourselves on privacy, customer service, and
-                affordability.
-              </p>
-              <Link href="/about" className="btn-primary">
-                Learn About Our Organization
+            <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3">
+              <Link href="/immigration" className="link-arrow">
+                Do I qualify for immigration help? →
+              </Link>
+              <Link href="/medi-cal" className="link-arrow">
+                Can I get free health coverage? →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Highlight stats */}
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { stat: 'DOJ', label: 'Recognized by the Dept. of Justice', border: 'border-navy' },
-                { stat: '501(c)3', label: 'Certified Nonprofit Organization', border: 'border-sage' },
-                { stat: '3', label: 'Languages: English, Español, العربية', border: 'border-terracotta' },
-                { stat: 'Free', label: 'Community Health Workers with Medi-Cal', border: 'border-sage' },
-              ].map((item) => (
-                <div key={item.label} className={`bg-white rounded-xl p-6 border-l-4 ${item.border} shadow-sm`}>
-                  <p className="font-display text-3xl font-bold text-navy mb-1">{item.stat}</p>
-                  <p className="text-sm text-ink/70 leading-snug">{item.label}</p>
-                </div>
-              ))}
+      {/* ── Numbered services list ──────────────────────────────────────── */}
+      <section className="pb-20 sm:pb-28" aria-labelledby="services-heading">
+        <div className="section-wrapper">
+          <div className="max-w-3xl mb-14">
+            <span className="eyebrow">What we do</span>
+            <h2 id="services-heading" className="section-title">
+              Real help, for real life.
+            </h2>
+          </div>
+
+          <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 list-none">
+            {services.map((svc, i) => (
+              <li key={svc.title} className="border-t border-ink/15 pt-6">
+                <p className="font-display text-terracotta-700 text-lg mb-3" aria-hidden="true">
+                  {String(i + 1).padStart(2, '0')}
+                </p>
+                <h3 className="font-display text-2xl text-navy font-medium mb-3 leading-snug">
+                  {svc.title}
+                </h3>
+                <p className="text-ink/70 leading-relaxed mb-4">{svc.description}</p>
+                <Link href={svc.href} className="link-arrow text-sm">
+                  Learn more →
+                </Link>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ── Why Welcome to America — photo + pillars ────────────────────── */}
+      <section className="py-20 sm:py-28 bg-white" aria-labelledby="why-heading">
+        <div className="section-wrapper">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden lg:sticky lg:top-28">
+              <Image
+                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=80"
+                alt="Hands joined together in support"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </div>
+
+            <div>
+              <h2 id="why-heading" className="section-title mb-12">
+                Why Welcome to America?
+              </h2>
+              <div className="space-y-10">
+                {pillars.map((p) => (
+                  <div key={p.title} className="border-t border-ink/15 pt-6">
+                    <h3 className="font-display text-2xl text-navy font-medium mb-3">
+                      {p.title}
+                    </h3>
+                    <p className="text-ink/70 leading-relaxed">{p.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Mid-page CTA ──────────────────────────────────────────────────── */}
+      {/* ── Twin program cards with checkmarks ──────────────────────────── */}
+      <section className="py-20 sm:py-28" aria-labelledby="programs-heading">
+        <div className="section-wrapper">
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <h2 id="programs-heading" className="section-title mb-4">
+              Two ways we can help, one place to start.
+            </h2>
+            <p className="section-subtitle">
+              Whether you need legal help or healthcare support, there&apos;s a
+              program built for you.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                tag: 'Immigration',
+                title: 'Immigration Legal Services',
+                cta: { label: 'Start Your Case', href: '/immigration' },
+                rows: [
+                  ['Who it’s for', 'Anyone navigating citizenship, green cards, fee waivers, or an immigration case — including victims of immigration fraud'],
+                  ['What you get', 'Legal advice, form preparation, DHS representation, accompaniment, and citizenship classes from DOJ Accredited Representatives'],
+                  ['Cost', 'Nonprofit low-cost rates, with fee waivers when you qualify'],
+                ],
+              },
+              {
+                tag: 'Community Health',
+                title: 'Health & Enrollment Support',
+                cta: { label: 'Find Support', href: '/community-health' },
+                rows: [
+                  ['Who it’s for', 'Anyone who needs help getting or using health coverage — Medi-Cal, Medicare, IEHP, Molina, or Covered California'],
+                  ['What you get', 'A dedicated community health worker, enrollment help, healthcare advocacy, translation, and ER/hospital assistance'],
+                  ['Cost', 'Free with Medi-Cal — no cost to you'],
+                ],
+              },
+            ].map((program) => (
+              <div key={program.title} className="card flex flex-col">
+                <span className="eyebrow">{program.tag}</span>
+                <h3 className="font-display text-3xl text-navy font-medium leading-tight mb-8">
+                  {program.title}
+                </h3>
+                <dl className="space-y-6 mb-10 flex-1">
+                  {program.rows.map(([label, value]) => (
+                    <div key={label} className="flex gap-3">
+                      <svg
+                        className="w-5 h-5 text-sage shrink-0 mt-0.5"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2.5}
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <dt className="font-body font-bold text-ink">{label}</dt>
+                        <dd className="text-ink/70 leading-relaxed">{value}</dd>
+                      </div>
+                    </div>
+                  ))}
+                </dl>
+                <Link href={program.cta.href} className="btn-secondary w-full">
+                  {program.cta.label}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Closing statement CTA ───────────────────────────────────────── */}
       <CTABanner
-        heading="Ready to Get Started?"
-        subtext="Call or text us today. Services available in English, Spanish, and Arabic."
-        variant="terracotta"
+        heading="Here to support you."
+        subtext="Call or text us today — or book an appointment by phone, Zoom, or in person."
       />
     </>
   )

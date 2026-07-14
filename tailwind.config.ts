@@ -8,33 +8,35 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Brand color palette — community-first, warm, trustworthy
+      // Brand color palette — evergreen + clay (pairteam-inspired warmth)
+      // NOTE: token names kept ("navy" = primary dark, "terracotta" = accent)
+      // so no component changes are needed to reskin the site.
       colors: {
         navy: {
-          DEFAULT: '#1B3A6B',
-          50: '#E8EEF7',
-          100: '#C5D3EC',
-          200: '#9CB5DC',
-          300: '#6E91C8',
-          400: '#4A73B7',
-          500: '#1B3A6B',
-          600: '#163160',
-          700: '#112754',
-          800: '#0C1D40',
-          900: '#07132B',
+          DEFAULT: '#215E61',
+          50: '#E8F1F1',
+          100: '#C4DBDC',
+          200: '#9AC2C4',
+          300: '#6FA8AB',
+          400: '#468D91',
+          500: '#215E61',
+          600: '#1C5154',
+          700: '#174346',
+          800: '#123638',
+          900: '#0B2324',
         },
         terracotta: {
-          DEFAULT: '#D4622A',
-          50: '#FBF0EA',
-          100: '#F5D6C4',
-          200: '#EDB598',
-          300: '#E3906A',
-          400: '#DB7448',
-          500: '#D4622A',
-          600: '#BE5523',
-          700: '#A3461C',
-          800: '#843714',
-          900: '#5E270D',
+          DEFAULT: '#D7630B',
+          50: '#FCEFE4',
+          100: '#F6D3B8',
+          200: '#EFB58A',
+          300: '#E6945B',
+          400: '#DF7B33',
+          500: '#D7630B',
+          600: '#BC5609',
+          700: '#9E4807',
+          800: '#7C3805',
+          900: '#572703',
         },
         sage: {
           DEFAULT: '#4A7C59',
@@ -49,7 +51,7 @@ const config: Config = {
           800: '#25432F',
           900: '#162B1D',
         },
-        cream: '#FAF8F4',
+        cream: '#FAF7F1',
         ink: '#1A1A1A',
       },
       // Brand typography

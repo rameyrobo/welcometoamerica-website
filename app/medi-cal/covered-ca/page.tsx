@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import PageCTAButtons from '@/components/PageCTAButtons'
+import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
   title: 'Covered California — Brand-Name Health Insurance',
@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export default function CoveredCAPage() {
   return (
     <>
-      <section className="bg-navy py-14">
+      <section className="bg-navy-800 py-20 sm:py-24">
         <div className="section-wrapper">
           <Link href="/medi-cal" className="text-white/50 text-sm font-body hover:text-white/80 transition-colors mb-4 inline-flex items-center gap-1">
             ← Medi-Cal
           </Link>
-          <h1 className="font-display text-4xl sm:text-5xl text-white font-bold">Covered California</h1>
+          <h1 className="font-display text-5xl sm:text-6xl text-white font-medium leading-[1.05] tracking-tight">Brand-name coverage, without the maze.</h1>
           <p className="text-white/70 font-body mt-3 text-lg max-w-xl">
-            Brand-name health insurance plans through California's official marketplace.
+            Covered California — brand-name health insurance plans through California's official marketplace.
           </p>
         </div>
       </section>
@@ -48,8 +48,7 @@ export default function CoveredCAPage() {
 
             <div className="space-y-4">
               <div className="card">
-                <div className="text-3xl mb-3">🏥</div>
-                <h3 className="font-body font-bold text-navy text-sm mb-2">All Plans Include</h3>
+                <h3 className="font-display text-xl text-navy font-medium mb-3">Every plan includes</h3>
                 <ul className="space-y-1.5">
                   {['Preventive care', 'Doctor visits', 'Emergency care', 'Prescription drugs', 'Mental health services', 'Pediatric care'].map((item) => (
                     <li key={item} className="flex items-center gap-2 font-body text-xs text-ink/70">
@@ -59,8 +58,7 @@ export default function CoveredCAPage() {
                 </ul>
               </div>
               <div className="card bg-sage/10 border-sage/20">
-                <div className="text-3xl mb-3">💰</div>
-                <h3 className="font-body font-bold text-navy text-sm mb-2">Financial Assistance Available</h3>
+                <h3 className="font-display text-xl text-navy font-medium mb-3">Financial assistance available</h3>
                 <p className="font-body text-xs text-ink/70 leading-relaxed">
                   Many Californians qualify for subsidies that significantly reduce their monthly 
                   premium. Our staff can check your eligibility instantly.
@@ -69,23 +67,23 @@ export default function CoveredCAPage() {
             </div>
           </div>
 
-          <div className="bg-terracotta rounded-xl p-8 text-center">
-            <h3 className="font-display text-2xl text-white font-bold mb-3">
-              Find your Covered California plan
+          <div className="bg-navy-800 rounded-2xl p-10 text-center">
+            <h3 className="font-display text-3xl text-white font-medium mb-3">
+              Find your Covered California plan.
             </h3>
             <p className="text-white/80 font-body mb-6">
               We compare plans for you and walk you through enrollment — for free. 
               <span className="block text-white/60 text-sm mt-1 italic">Le ayudamos a comparar planes y completar su inscripción — gratis.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8332491563" className="btn-outline-white">🏥 CHW Line: 833-249-1563</a>
-              <a href="tel:8449826374" className="btn-outline-white">📞 Main: 844-982-6374</a>
+              <a href="tel:8332491563" className="btn-primary">CHW Line: 833-249-1563</a>
+              <a href="tel:8449826374" className="btn-outline-white">Main: 844-982-6374</a>
             </div>
           </div>
         </div>
       </section>
 
-      <PageCTAButtons />
+      <CTABanner heading="Here to support you." subtext="Call or text us today — or book an appointment by phone, Zoom, or in person." />
     </>
   )
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import PageCTAButtons from '@/components/PageCTAButtons'
+import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
   title: 'Locations',
@@ -161,7 +161,7 @@ export default function LocationsPage() {
         </div>
       </section>
 
-      <PageCTAButtons />
+      <CTABanner heading="Here to support you." subtext="Call or text us today — or book an appointment by phone, Zoom, or in person." />
     </>
   )
 }

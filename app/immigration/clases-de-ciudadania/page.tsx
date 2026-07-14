@@ -11,37 +11,31 @@ export const metadata: Metadata = {
 
 const temas = [
   {
-    icon: '📜',
     title: 'Historia de EE.UU.',
     description:
       'Aprenda sobre los eventos clave, documentos fundacionales, guerras, movimientos de derechos civiles y la historia que formó a los Estados Unidos.',
   },
   {
-    icon: '🏛️',
     title: 'Educación Cívica y Gobierno',
     description:
       'Comprenda las tres ramas del gobierno, cómo se hacen las leyes, la Carta de Derechos y cómo funciona la democracia en los Estados Unidos.',
   },
   {
-    icon: '🗣️',
     title: 'Habilidades en Inglés',
     description:
       'Desarrolle habilidades de lectura, escritura y expresión oral necesarias para la entrevista del USCIS, con práctica del vocabulario usado en la naturalización.',
   },
   {
-    icon: '📝',
     title: 'Las 100 Preguntas del USCIS',
     description:
       'Estudie las 100 preguntas y respuestas oficiales de educación cívica del USCIS. Practique hasta poder responder con confianza al menos 6 de las 10 preguntas.',
   },
   {
-    icon: '🎤',
     title: 'Entrevistas de Práctica',
     description:
       'Participe en entrevistas simuladas que replican la experiencia de la entrevista real de naturalización del USCIS, para que no haya sorpresas.',
   },
   {
-    icon: '📋',
     title: 'Revisión del Formulario N-400',
     description:
       'Obtenga ayuda para entender el Formulario N-400 (Solicitud de Naturalización) y cómo responder cada pregunta de manera precisa y completa.',
@@ -53,7 +47,7 @@ export default function ClasesCiudadaniaPage() {
     <>
       <HeroSection
         badge="Servicios de Inmigración · Educación"
-        headline="Clases de Ciudadanía"
+        headline="Llegue a su entrevista con confianza."
         subheadline="¿Se está preparando para su entrevista de naturalización? Nuestras clases de ciudadanía le ayudan a estudiar la historia de EE.UU., educación cívica e inglés — todo lo que necesita para aprobar su entrevista con confianza."
         primaryCta={{ label: 'Llámenos: 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Mensaje: 562-472-5246', href: 'sms:5624725246' }}
@@ -83,7 +77,7 @@ export default function ClasesCiudadaniaPage() {
           </div>
 
           <h2 id="clases-heading" className="section-title mb-6">
-            Prepárese para Convertirse en Ciudadano/a de EE.UU.
+            Prepárese para convertirse en ciudadano/a de EE.UU.
           </h2>
           <div className="space-y-4 text-ink/75 leading-relaxed">
             <p>
@@ -107,17 +101,12 @@ export default function ClasesCiudadaniaPage() {
 
           {/* Disponibilidad */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { icon: '📞', label: 'Por Teléfono' },
-              { icon: '💻', label: 'En Línea / Zoom' },
-              { icon: '🏫', label: 'En Persona' },
-            ].map((item) => (
+            {['Por teléfono', 'En línea / Zoom', 'En persona'].map((label) => (
               <div
-                key={item.label}
-                className="flex items-center gap-3 bg-navy/5 rounded-xl px-5 py-4 border border-navy/10"
+                key={label}
+                className="bg-navy/5 rounded-xl px-5 py-4 border border-navy/10 text-center"
               >
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                <span className="font-body font-semibold text-navy">{item.label}</span>
+                <span className="font-body font-semibold text-navy">{label}</span>
               </div>
             ))}
           </div>
@@ -128,13 +117,12 @@ export default function ClasesCiudadaniaPage() {
       <section className="py-16 bg-navy/5" lang="es" aria-labelledby="temas-heading">
         <div className="section-wrapper">
           <h2 id="temas-heading" className="section-title text-center mb-10">
-            Lo Que Cubrimos en Nuestras Clases
+            Lo que cubrimos en nuestras clases.
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {temas.map((tema) => (
               <div key={tema.title} className="card">
-                <div className="text-3xl mb-3" aria-hidden="true">{tema.icon}</div>
-                <h3 className="font-display text-lg text-navy font-semibold mb-2">
+                <h3 className="font-display text-xl text-navy font-medium mb-2">
                   {tema.title}
                 </h3>
                 <p className="text-ink/70 text-sm leading-relaxed">{tema.description}</p>
@@ -149,7 +137,7 @@ export default function ClasesCiudadaniaPage() {
         <div className="section-wrapper max-w-3xl mx-auto">
           <div className="bg-white border border-navy/15 rounded-xl p-7 shadow-sm">
             <h2 id="materiales-heading" className="font-display text-2xl text-navy font-semibold mb-4">
-              Materiales de Estudio Oficiales del USCIS
+              Materiales de estudio oficiales del USCIS.
             </h2>
             <p className="text-ink/70 leading-relaxed mb-5">
               El USCIS proporciona materiales de estudio gratuitos para el examen de
@@ -168,9 +156,8 @@ export default function ClasesCiudadaniaPage() {
       </section>
 
       <CTABanner
-        heading="Inscríbase en Nuestras Clases de Ciudadanía"
+        heading="Su clase comienza con una llamada."
         subtext="Llámenos o envíenos un mensaje para comenzar. Clases disponibles por teléfono, en línea y en persona."
-        variant="navy"
       />
     </>
   )
