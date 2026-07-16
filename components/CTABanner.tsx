@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react'
+
 interface CTABannerProps {
   heading: string
   subtext?: string
@@ -58,7 +60,7 @@ export default function CTABanner({
             rel="noopener noreferrer"
             className="font-body font-semibold text-white/85 underline decoration-white/30 underline-offset-4 hover:decoration-white transition-all"
           >
-            Book an appointment — phone, Zoom, or in person →
+            Book an appointment — phone, Zoom, or in person <ArrowRight className="inline size-4 -mt-0.5" aria-hidden="true" />
           </a>
           <a
             href="https://secure.lawpay.com/pages/welcometoamericaservice/operating"
@@ -66,7 +68,7 @@ export default function CTABanner({
             rel="noopener noreferrer"
             className="font-body font-semibold text-white/85 underline decoration-white/30 underline-offset-4 hover:decoration-white transition-all"
           >
-            Make a payment →
+            Make a payment <ArrowRight className="inline size-4 -mt-0.5" aria-hidden="true" />
           </a>
         </div>
 

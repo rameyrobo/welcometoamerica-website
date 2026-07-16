@@ -1,3 +1,5 @@
+import { Languages } from 'lucide-react'
+
 interface BilingualBlockProps {
   englishContent: React.ReactNode
   spanishContent: React.ReactNode
@@ -27,7 +29,7 @@ export default function BilingualBlock({
             {spanishLabel}
           </span>
           <div className="flex-1 h-px bg-sage/20" aria-hidden="true" />
-          <span className="text-sage/60 text-xs">🇲🇽</span>
+          <Languages className="size-4 text-sage/60" aria-hidden="true" />
         </div>
         {spanishContent}
       </div>

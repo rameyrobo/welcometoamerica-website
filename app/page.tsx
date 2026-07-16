@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Welcome to America Services | DOJ-Recognized Immigration & Community Health',
@@ -114,10 +115,10 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3">
               <Link href="/immigration" className="link-arrow">
-                Do I qualify for immigration help? →
+                Do I qualify for immigration help? <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link href="/medi-cal" className="link-arrow">
-                Can I get free health coverage? →
+                Can I get free health coverage? <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -145,7 +146,7 @@ export default function HomePage() {
                 </h3>
                 <p className="text-ink/70 leading-relaxed mb-4">{svc.description}</p>
                 <Link href={svc.href} className="link-arrow text-sm">
-                  Learn more →
+                  Learn more <ArrowRight className="size-3.5" aria-hidden="true" />
                 </Link>
               </li>
             ))}

@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 import CTABanner from '@/components/CTABanner'
+import {
+  ArrowRight, Building2, CalendarDays, HeartPulse, Hospital,
+  Mail, MapPin, MessageCircle, Phone, Video, Waves,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Locations',
@@ -14,7 +18,7 @@ const locations = [
     suite: 'Suite #104 & #106',
     cityStateZip: 'Hesperia, CA 92345',
     mapsHref: 'https://maps.google.com/?q=17130+Sequoia+St+Hesperia+CA+92345',
-    emoji: '🏢',
+    icon: Building2,
   },
   {
     city: 'Long Beach',
@@ -22,13 +26,13 @@ const locations = [
     suite: 'Suite #400',
     cityStateZip: 'Long Beach, CA 90802',
     mapsHref: 'https://maps.google.com/?q=111+W+Ocean+Blvd+Long+Beach+CA+90802',
-    emoji: '🌊',
+    icon: Waves,
   },
 ]
 
 const contactMethods = [
   {
-    icon: '📞',
+    icon: Phone,
     title: 'Main Line',
     value: '844-WTAMERICA',
     sub: '844-982-6374',
@@ -36,7 +40,7 @@ const contactMethods = [
     cta: 'Call Now',
   },
   {
-    icon: '🏥',
+    icon: HeartPulse,
     title: 'CHW Support Line',
     value: '833-249-1563',
     sub: 'Community Health Workers',
@@ -44,7 +48,7 @@ const contactMethods = [
     cta: 'Call Now',
   },
   {
-    icon: '💬',
+    icon: MessageCircle,
     title: 'Text Us',
     value: '562-472-5246',
     sub: 'Text anytime',
@@ -52,7 +56,7 @@ const contactMethods = [
     cta: 'Text Now',
   },
   {
-    icon: '✉️',
+    icon: Mail,
     title: 'Email',
     value: 'info@welcometoamericaservices.com',
     sub: 'We respond promptly',
@@ -62,10 +66,10 @@ const contactMethods = [
 ]
 
 const serviceMethods = [
-  { icon: '🏢', label: 'In-Person', desc: 'Visit one of our two Southern California offices. By appointment only.' },
-  { icon: '📞', label: 'By Phone', desc: 'Call or text — we handle everything over the phone.' },
-  { icon: '💻', label: 'Via Zoom', desc: 'Virtual appointments available.' },
-  { icon: '🏨', label: 'Hospital Visits', desc: 'We come to you when you need us most.' },
+  { icon: Building2, label: 'In-Person', desc: 'Visit one of our two Southern California offices. By appointment only.' },
+  { icon: Phone, label: 'By Phone', desc: 'Call or text — we handle everything over the phone.' },
+  { icon: Video, label: 'Via Zoom', desc: 'Virtual appointments available.' },
+  { icon: Hospital, label: 'Hospital Visits', desc: 'We come to you when you need us most.' },
 ]
 
 export default function LocationsPage() {
@@ -85,7 +89,8 @@ export default function LocationsPage() {
       <div className="bg-terracotta">
         <div className="section-wrapper py-3 text-center">
           <p className="text-white font-body font-semibold text-sm tracking-wide">
-            📅 By Appointment Only · <span className="italic opacity-90">Por Cita Solamente</span>
+            <CalendarDays className="inline size-4 -mt-0.5 mr-1" aria-hidden="true" />
+            By Appointment Only · <span className="italic opacity-90">Por Cita Solamente</span>
           </p>
         </div>
       </div>
@@ -99,7 +104,7 @@ export default function LocationsPage() {
             {locations.map((loc) => (
               <div key={loc.city} className="card hover:border-navy/30 transition-colors">
                 <div className="flex items-start gap-4">
-                  <span className="text-3xl">{loc.emoji}</span>
+                  <loc.icon className="size-8 text-navy shrink-0 mt-1" aria-hidden="true" />
                   <div className="flex-1">
                     <h3 className="font-display text-xl text-navy font-bold mb-3">{loc.city}</h3>
                     <address className="not-italic font-body text-base text-ink/80 leading-relaxed mb-4">
@@ -114,7 +119,7 @@ export default function LocationsPage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-terracotta font-body font-semibold text-sm hover:underline"
                       >
-                        🗺️ Get Directions →
+                        <MapPin className="size-4" aria-hidden="true" /> Get Directions <ArrowRight className="size-3.5" aria-hidden="true" />
                       </a>
                     </div>
                   </div>
@@ -128,7 +133,7 @@ export default function LocationsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
             {serviceMethods.map((method) => (
               <div key={method.label} className="card text-center">
-                <span className="text-3xl block mb-3">{method.icon}</span>
+                <method.icon className="size-7 mx-auto mb-3 text-navy" aria-hidden="true" />
                 <p className="font-body font-bold text-navy text-sm mb-2">{method.label}</p>
                 <p className="font-body text-xs text-ink/60 leading-relaxed">{method.desc}</p>
               </div>
@@ -144,7 +149,7 @@ export default function LocationsPage() {
                 href={method.href}
                 className="card group hover:border-terracotta/30 flex items-start gap-5 no-underline"
               >
-                <span className="text-4xl flex-shrink-0">{method.icon}</span>
+                <method.icon className="size-8 flex-shrink-0 text-terracotta" aria-hidden="true" />
                 <div className="flex-1 min-w-0">
                   <p className="font-body text-xs text-ink/50 uppercase tracking-wider mb-1">{method.title}</p>
                   <p className="font-body font-bold text-navy text-base truncate group-hover:text-terracotta transition-colors">
@@ -152,7 +157,7 @@ export default function LocationsPage() {
                   </p>
                   <p className="font-body text-xs text-ink/55 mt-0.5">{method.sub}</p>
                   <span className="inline-block mt-3 text-terracotta font-body font-semibold text-sm group-hover:underline">
-                    {method.cta} →
+                    {method.cta} <ArrowRight className="inline size-3.5 -mt-0.5" aria-hidden="true" />
                   </span>
                 </div>
               </a>

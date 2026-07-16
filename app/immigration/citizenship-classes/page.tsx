@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Citizenship Classes',
@@ -140,7 +141,7 @@ export default function CitizenshipClassesPage() {
               rel="noopener noreferrer"
               className="btn-primary inline-flex"
             >
-              USCIS Official Study Materials →
+              USCIS Official Study Materials <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
         </div>

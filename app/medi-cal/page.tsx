@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Medi-Cal Enrollment',
@@ -131,7 +132,7 @@ export default function MediCalPage() {
           <ul className="space-y-3">
             {immigrantCategories.map((cat, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="text-sage shrink-0 mt-1" aria-hidden="true">✓</span>
+                <Check className="size-4 text-sage shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
                 <span className="text-ink/80 leading-relaxed">{cat}</span>
               </li>
             ))}

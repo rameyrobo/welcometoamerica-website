@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import { ArrowRight, Languages } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Clases de Ciudadanía (Citizenship Classes in Spanish)',
@@ -70,7 +71,7 @@ export default function ClasesCiudadaniaPage() {
         <div className="section-wrapper max-w-3xl mx-auto">
           {/* Language note */}
           <div className="inline-flex items-center gap-2 bg-sage/10 border border-sage/20 px-4 py-2 rounded-full mb-6">
-            <span aria-hidden="true">🇲🇽</span>
+            <Languages className="size-4 text-sage" aria-hidden="true" />
             <span className="text-sage font-body font-semibold text-sm">
               Esta página está disponible en Español
             </span>
@@ -149,7 +150,7 @@ export default function ClasesCiudadaniaPage() {
               rel="noopener noreferrer"
               className="btn-primary inline-flex"
             >
-              Materiales Oficiales del USCIS →
+              Materiales Oficiales del USCIS <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { Phone, MessageCircle } from 'lucide-react'
 
 // ─── Nav structure ────────────────────────────────────────────────────────────
 // Each top-level item can be a plain link OR a dropdown.
@@ -170,16 +171,16 @@ export default function Navbar() {
           <div className="flex items-center gap-4 ml-auto sm:ml-0">
             <a
               href="tel:8449826374"
-              className="text-white font-semibold text-xs sm:text-sm hover:text-white/80 transition-colors"
+              className="inline-flex items-center gap-1.5 text-white font-semibold text-xs sm:text-sm hover:text-white/80 transition-colors"
             >
-              📞 844-982-6374
+              <Phone className="size-3.5" aria-hidden="true" /> 844-982-6374
             </a>
             <span className="text-white/40 hidden sm:block">|</span>
             <a
               href="sms:5624725246"
-              className="text-white font-semibold text-xs sm:text-sm hover:text-white/80 transition-colors hidden sm:block"
+              className="hidden sm:inline-flex items-center gap-1.5 text-white font-semibold text-xs sm:text-sm hover:text-white/80 transition-colors"
             >
-              💬 Text: 562-472-5246
+              <MessageCircle className="size-3.5" aria-hidden="true" /> Text: 562-472-5246
             </a>
           </div>
         </div>
@@ -330,15 +331,15 @@ export default function Navbar() {
               <li className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
                 <a
                   href="tel:8449826374"
-                  className="block px-4 py-3 bg-terracotta text-ink font-bold rounded-full text-sm text-center"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-terracotta text-ink font-bold rounded-full text-sm"
                 >
-                  📞 Call: 844-982-6374
+                  <Phone className="size-4" aria-hidden="true" /> Call: 844-982-6374
                 </a>
                 <a
                   href="sms:5624725246"
-                  className="block px-4 py-3 border border-white/30 text-white/80 rounded text-sm text-center"
+                  className="flex items-center justify-center gap-2 px-4 py-3 border border-white/30 text-white/80 rounded text-sm"
                 >
-                  💬 Text: 562-472-5246
+                  <MessageCircle className="size-4" aria-hidden="true" /> Text: 562-472-5246
                 </a>
               </li>
             </ul>

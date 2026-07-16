@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
@@ -61,7 +62,7 @@ export default function PrivacyPolicyPage() {
                   'To send appointment reminders and service updates (with your consent)',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-ink/75 leading-relaxed">
-                    <span className="text-sage font-bold mt-0.5">✓</span>
+                    <Check className="size-4 text-sage shrink-0 mt-0.5" strokeWidth={3} aria-hidden="true" />
                     {item}
                   </li>
                 ))}
@@ -112,7 +113,7 @@ export default function PrivacyPolicyPage() {
                   'Withdraw consent for us to contact you',
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-sm text-ink/70">
-                    <span className="text-sage font-bold mt-0.5">✓</span>
+                    <Check className="size-4 text-sage shrink-0 mt-0.5" strokeWidth={3} aria-hidden="true" />
                     {item}
                   </li>
                 ))}

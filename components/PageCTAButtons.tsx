@@ -1,3 +1,5 @@
+import { CalendarDays, CreditCard } from 'lucide-react'
+
 /**
  * PageCTAButtons — persistent CTA strip shown at the bottom of every content page,
  * above the footer. Two action buttons: Appointments and Make a Payment.
@@ -35,7 +37,7 @@ export default function PageCTAButtons() {
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta
             "
           >
-            <span className="text-3xl shrink-0" aria-hidden="true">📅</span>
+            <CalendarDays className="size-9 shrink-0" aria-hidden="true" />
             <span>
               <span className="block text-base font-bold tracking-wide uppercase">
                 Appointments
@@ -68,7 +70,7 @@ export default function PageCTAButtons() {
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sage
             "
           >
-            <span className="text-3xl shrink-0" aria-hidden="true">💳</span>
+            <CreditCard className="size-9 shrink-0" aria-hidden="true" />
             <span>
               <span className="block text-base font-bold tracking-wide uppercase">
                 Make a Payment

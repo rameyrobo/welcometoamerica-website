@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import CTABanner from '@/components/CTABanner'
+import { ArrowLeft, Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Covered California — Brand-Name Health Insurance',
@@ -14,7 +15,7 @@ export default function CoveredCAPage() {
       <section className="bg-navy-800 py-20 sm:py-24">
         <div className="section-wrapper">
           <Link href="/medi-cal" className="text-white/50 text-sm font-body hover:text-white/80 transition-colors mb-4 inline-flex items-center gap-1">
-            ← Medi-Cal
+            <ArrowLeft className="size-4" aria-hidden="true" /> Medi-Cal
           </Link>
           <h1 className="font-display text-5xl sm:text-6xl text-white font-medium leading-[1.05] tracking-tight">Brand-name coverage, without the maze.</h1>
           <p className="text-white/70 font-body mt-3 text-lg max-w-xl">
@@ -52,7 +53,7 @@ export default function CoveredCAPage() {
                 <ul className="space-y-1.5">
                   {['Preventive care', 'Doctor visits', 'Emergency care', 'Prescription drugs', 'Mental health services', 'Pediatric care'].map((item) => (
                     <li key={item} className="flex items-center gap-2 font-body text-xs text-ink/70">
-                      <span className="text-sage">✓</span> {item}
+                      <Check className="size-3.5 text-sage shrink-0" strokeWidth={3} aria-hidden="true" /> {item}
                     </li>
                   ))}
                 </ul>

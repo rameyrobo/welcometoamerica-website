@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Immigration Legal Services',
@@ -141,7 +142,7 @@ export default function ImmigrationPage() {
                   key={i}
                   className="flex items-start gap-3 bg-white rounded-lg p-4 border border-navy/10"
                 >
-                  <span className="text-sage text-lg shrink-0" aria-hidden="true">✓</span>
+                  <Check className="size-5 text-sage shrink-0" strokeWidth={3} aria-hidden="true" />
                   <span className="text-ink/80 text-sm leading-relaxed">{reason}</span>
                 </div>
               ))}
@@ -202,7 +203,7 @@ export default function ImmigrationPage() {
                 <ul className="space-y-3">
                   {citizenRights.map((right, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-ink/80">
-                      <span className="text-sage shrink-0 mt-0.5" aria-hidden="true">✓</span>
+                      <Check className="size-4 text-sage shrink-0 mt-0.5" strokeWidth={3} aria-hidden="true" />
                       {right}
                     </li>
                   ))}

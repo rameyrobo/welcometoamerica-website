@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Phone, HeartPulse, MessageCircle, Mail, Check } from 'lucide-react'
 
 const footerLinks = {
   services: [
@@ -44,14 +45,14 @@ export default function Footer() {
 
             {/* Trust badges */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
-                ✓ DOJ Recognized
+              <span className="inline-flex items-center gap-1.5 text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
+                <Check className="size-3.5" aria-hidden="true" /> DOJ Recognized
               </span>
-              <span className="text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
-                ✓ Nonprofit 501(c)3
+              <span className="inline-flex items-center gap-1.5 text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
+                <Check className="size-3.5" aria-hidden="true" /> Nonprofit 501(c)3
               </span>
-              <span className="text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
-                ✓ English / Español / العربية
+              <span className="inline-flex items-center gap-1.5 text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
+                <Check className="size-3.5" aria-hidden="true" /> English / Español / العربية
               </span>
             </div>
 
@@ -96,7 +97,7 @@ export default function Footer() {
                   href="tel:8449826374"
                   className="flex items-start gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <span className="mt-0.5 shrink-0">📞</span>
+                  <Phone className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                   <div>
                     <span className="block font-semibold text-white text-xs uppercase tracking-wide">
                       Main Line
@@ -110,7 +111,7 @@ export default function Footer() {
                   href="tel:8332491563"
                   className="flex items-start gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <span className="mt-0.5 shrink-0">🏥</span>
+                  <HeartPulse className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                   <div>
                     <span className="block font-semibold text-white text-xs uppercase tracking-wide">
                       CHW Support Line
@@ -124,7 +125,7 @@ export default function Footer() {
                   href="sms:5624725246"
                   className="flex items-start gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <span className="mt-0.5 shrink-0">💬</span>
+                  <MessageCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                   <div>
                     <span className="block font-semibold text-white text-xs uppercase tracking-wide">
                       Text Us
@@ -138,7 +139,7 @@ export default function Footer() {
                   href="mailto:info@welcometoamericaservices.com"
                   className="flex items-start gap-2 text-white/70 hover:text-white transition-colors"
                 >
-                  <span className="mt-0.5 shrink-0">✉️</span>
+                  <Mail className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
                   <div>
                     <span className="block font-semibold text-white text-xs uppercase tracking-wide">
                       Email

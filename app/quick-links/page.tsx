@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import CTABanner from '@/components/CTABanner'
+import {
+  BookOpen, ExternalLink, Flag, Landmark, MessageCircle, Phone, Stethoscope,
+} from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Quick Links — Immigration & Healthcare Resources',
@@ -10,7 +13,7 @@ export const metadata: Metadata = {
 const resourceCategories = [
   {
     title: 'Immigration Resources',
-    icon: '🏛️',
+    icon: Landmark,
     links: [
       {
         name: 'USCIS — U.S. Citizenship and Immigration Services',
@@ -40,7 +43,7 @@ const resourceCategories = [
   },
   {
     title: 'Healthcare Resources',
-    icon: '🏥',
+    icon: Stethoscope,
     links: [
       {
         name: 'Medi-Cal — DHCS California',
@@ -64,7 +67,7 @@ const resourceCategories = [
   },
   {
     title: 'Government Benefits',
-    icon: '🇺🇸',
+    icon: Flag,
     links: [
       {
         name: 'USA.gov — Benefits',
@@ -94,7 +97,7 @@ const resourceCategories = [
   },
   {
     title: 'Education & Literacy',
-    icon: '📚',
+    icon: BookOpen,
     links: [
       {
         name: 'National Literacy Directory',
@@ -132,7 +135,7 @@ export default function QuickLinksPage() {
             {resourceCategories.map((category) => (
               <div key={category.title}>
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-2xl">{category.icon}</span>
+                  <category.icon className="size-6 text-terracotta" aria-hidden="true" />
                   <h2 className="font-display text-2xl text-navy font-bold">{category.title}</h2>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -148,9 +151,7 @@ export default function QuickLinksPage() {
                         <p className="font-body font-bold text-navy text-sm group-hover:text-terracotta transition-colors leading-tight">
                           {link.name}
                         </p>
-                        <svg className="w-4 h-4 text-ink/30 flex-shrink-0 mt-0.5 group-hover:text-terracotta transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                        </svg>
+                        <ExternalLink className="size-4 text-ink/30 flex-shrink-0 mt-0.5 group-hover:text-terracotta transition-colors" aria-hidden="true" />
                       </div>
                       <p className="font-body text-xs text-ink/60 leading-relaxed flex-1">{link.desc}</p>
                       <span className="font-body text-xs text-terracotta font-semibold mt-1">{link.label}</span>
@@ -170,8 +171,12 @@ export default function QuickLinksPage() {
               Our team is here to help you — we'll walk you through any of these sites and processes step by step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:8449826374" className="btn-outline-white">📞 844-982-6374</a>
-              <a href="sms:5624725246" className="btn-outline-white">💬 Text 562-472-5246</a>
+              <a href="tel:8449826374" className="btn-outline-white inline-flex items-center justify-center gap-2">
+                <Phone className="size-4" aria-hidden="true" /> 844-982-6374
+              </a>
+              <a href="sms:5624725246" className="btn-outline-white inline-flex items-center justify-center gap-2">
+                <MessageCircle className="size-4" aria-hidden="true" /> Text 562-472-5246
+              </a>
             </div>
           </div>
         </div>
