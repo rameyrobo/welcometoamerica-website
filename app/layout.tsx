@@ -21,6 +21,7 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.welcometoamericaservices.com'),
   title: {
     default: 'Welcome to America Services | DOJ-Recognized Immigration & Health',
     template: '%s | Welcome to America Services',
