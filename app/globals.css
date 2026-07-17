@@ -7,7 +7,7 @@
   :root {
     /* CSS custom properties matching the brand palette */
     --color-navy: #215e61; /* deep teal — token name kept for compatibility */
-    --color-terracotta: #d7630b; /* warm orange */
+    --color-terracotta: #2a9993; /* bright teal */
     --color-sage: #4a7c59;
     --color-cream: #faf7f1;
     --color-ink: #1a1a1a;
@@ -54,8 +54,8 @@
   }
 
   /* Primary CTA button — pill with small-caps label (pairteam style).
-     Ink label: white on #D7630B is 3.7:1 (fails AA for 14px text);
-     ink passes at 4.71:1. */
+     Ink label: white on #2A9993 is 3.5:1 (fails AA for 14px text);
+     ink passes at 5.0:1. */
   .btn-primary {
     @apply inline-flex items-center justify-center gap-2
            bg-terracotta text-ink font-body font-bold

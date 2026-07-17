@@ -8,9 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Brand color palette — evergreen + clay (pairteam-inspired warmth)
+      // Brand color palette — deep evergreen + bright teal accent
       // NOTE: token names kept ("navy" = primary dark, "terracotta" = accent)
       // so no component changes are needed to reskin the site.
+      // Accent #2A9993: ink text on it = 5.0:1 (passes WCAG AA);
+      // white on it = 3.5:1 (large text/UI only) — keep text-ink labels.
       colors: {
         navy: {
           DEFAULT: '#215E61',
@@ -26,17 +28,17 @@ const config: Config = {
           900: '#0B2324',
         },
         terracotta: {
-          DEFAULT: '#D7630B',
-          50: '#FCEFE4',
-          100: '#F6D3B8',
-          200: '#EFB58A',
-          300: '#E6945B',
-          400: '#DF7B33',
-          500: '#D7630B',
-          600: '#BC5609',
-          700: '#9E4807',
-          800: '#7C3805',
-          900: '#572703',
+          DEFAULT: '#2A9993',
+          50: '#E5F3F2',
+          100: '#BCE0DD',
+          200: '#90CCC8',
+          300: '#68B9B4',
+          400: '#45A8A3',
+          500: '#2A9993',
+          600: '#248680',
+          700: '#1D6F6A',
+          800: '#175853',
+          900: '#103D3A',
         },
         sage: {
           DEFAULT: '#4A7C59',
