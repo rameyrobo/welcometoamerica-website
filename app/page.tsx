@@ -99,10 +99,11 @@ export default function HomePage() {
         imageAlt="Diverse community members together"
       />
 
-      {/* ── Statement intro ─────────────────────────────────────────────── */}
+      {/* ── Statement intro — centered manifesto beat between the
+             left-aligned hero and the services grid ────────────────────── */}
       <section className="py-20 sm:py-28" aria-labelledby="intro-heading">
         <div className="section-wrapper">
-          <div className="max-w-3xl">
+          <div className="max-w-2xl mx-auto text-center">
             <h2 id="intro-heading" className="section-title mb-6">
               Addressing what matters most, first.
             </h2>
@@ -113,7 +114,7 @@ export default function HomePage() {
               Accredited Representatives and community health workers — recognized
               by the Department of Justice, rooted in your community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3">
+            <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3 items-center justify-center">
               <Link href="/immigration" className="link-arrow">
                 Do I qualify for immigration help? <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
