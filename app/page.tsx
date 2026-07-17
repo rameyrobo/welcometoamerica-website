@@ -103,7 +103,8 @@ export default function HomePage() {
              left-aligned hero and the services grid ────────────────────── */}
       <section className="py-20 sm:py-28" aria-labelledby="intro-heading">
         <div className="section-wrapper">
-          <div className="max-w-2xl mx-auto text-center">
+          {/* Block centered on the page; text stays left-aligned inside */}
+          <div className="max-w-2xl mx-auto">
             <h2 id="intro-heading" className="section-title mb-6">
               Addressing what matters most, first.
             </h2>
@@ -114,7 +115,7 @@ export default function HomePage() {
               Accredited Representatives and community health workers — recognized
               by the Department of Justice, rooted in your community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3 items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3">
               <Link href="/immigration" className="link-arrow">
                 Do I qualify for immigration help? <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
