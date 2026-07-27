@@ -6,7 +6,7 @@ import CTABanner from '@/components/CTABanner'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Welcome to America Services | DOJ-Recognized Immigration & Community Health',
+  title: 'Welcome to America Services | DOJ-Recognized Immigration Legal Services',
   description:
     'Free and low-cost immigration legal services, community health workers, and Medi-Cal enrollment. DOJ Recognized Nonprofit serving Southern California.',
 }
@@ -38,28 +38,10 @@ const services = [
     href: '/immigration',
   },
   {
-    title: 'Community health workers',
-    description:
-      'Free with Medi-Cal: a trusted health worker who connects you to care, translates for providers, and walks with you through the healthcare system.',
-    href: '/community-health',
-  },
-  {
-    title: 'Healthcare advocacy',
-    description:
-      'We help you understand your healthcare rights and connect you to housing, food, and social service resources in your community.',
-    href: '/community-health',
-  },
-  {
     title: 'Medi-Cal & Medicare enrollment',
     description:
       'Enrollment help for Medi-Cal, Medicare, IEHP, Molina, and Covered California — in English, Spanish, and Arabic, at no cost to you.',
     href: '/medi-cal',
-  },
-  {
-    title: 'Emergency room & hospital assistance',
-    description:
-      'When a health emergency and an immigration concern collide, we help you navigate both — at the ER, in the hospital, and after discharge.',
-    href: '/community-health',
   },
   {
     title: 'Citizenship classes',
@@ -93,7 +75,7 @@ export default function HomePage() {
         headline="Help for your whole journey."
         subheadline="Immigration legal services, community health workers, and healthcare enrollment for Southern California — from a nonprofit your community already trusts. Free or low cost, in English, Español, and العربية."
         primaryCta={{ label: 'Get Immigration Help', href: '/immigration' }}
-        secondaryCta={{ label: 'Find a Health Worker', href: '/community-health' }}
+        secondaryCta={{ label: 'Citizenship Classes', href: '/immigration/citizenship-classes' }}
         showPhone
         imageUrl="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80"
         imageAlt="Diverse community members together"
@@ -212,16 +194,6 @@ export default function HomePage() {
                   ['Who it’s for', 'Anyone navigating citizenship, green cards, fee waivers, or an immigration case — including victims of immigration fraud'],
                   ['What you get', 'Legal advice, form preparation, DHS representation, accompaniment, and citizenship classes from DOJ Accredited Representatives'],
                   ['Cost', 'Nonprofit low-cost rates, with fee waivers when you qualify'],
-                ],
-              },
-              {
-                tag: 'Community Health',
-                title: 'Health & Enrollment Support',
-                cta: { label: 'Find Support', href: '/community-health' },
-                rows: [
-                  ['Who it’s for', 'Anyone who needs help getting or using health coverage — Medi-Cal, Medicare, IEHP, Molina, or Covered California'],
-                  ['What you get', 'A dedicated community health worker, enrollment help, healthcare advocacy, translation, and ER/hospital assistance'],
-                  ['Cost', 'Free with Medi-Cal — no cost to you'],
                 ],
               },
             ].map((program) => (

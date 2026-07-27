@@ -22,7 +22,6 @@ const servicesProvided = [
   'Immigration Case Support Services',
   'Immigration Fraud Victim Support',
   'Department of Justice Accredited Representatives',
-  'Community Health Workers',
   'Healthcare Advocacy',
   'Medi-Cal and Medicare Enrollments',
   'Emergency Room & Hospital Healthcare and Immigration Assistance',

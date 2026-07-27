@@ -6,7 +6,6 @@ const footerLinks = {
     { href: '/immigration', label: 'Immigration Legal Services' },
     { href: '/immigration/green-card', label: 'Green Card' },
     { href: '/immigration/citizenship-classes', label: 'Citizenship Classes' },
-    { href: '/community-health', label: 'Community Health Workers' },
     { href: '/medi-cal', label: 'Medi-Cal & Medicare' },
     { href: '/medi-cal/covered-ca', label: 'Covered California' },
   ],

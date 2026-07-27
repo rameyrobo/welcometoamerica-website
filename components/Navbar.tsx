@@ -28,7 +28,6 @@ const navItems: NavItem[] = [
       { label: 'Clases de Ciudadanía', href: '/immigration/clases-de-ciudadania' },
     ],
   },
-  { label: 'Community Health Worker', href: '/community-health' },
   {
     label: 'Medi-Cal',
     href: '/medi-cal',
