@@ -59,7 +59,7 @@ export default function MedicarePage() {
     <>
       <HeroSection
         badge="Healthcare Enrollment"
-        headline="Turning 65 shouldn\u2019t be confusing."
+        headline="Turning 65 shouldn’t be confusing."
         subheadline="Medicare is the federal health insurance program for people 65 and older, and for people under 65 with certain disabilities. Welcome to America helps you understand your options and enroll — at no charge."
         primaryCta={{ label: 'Call 844-982-6374', href: 'tel:8449826374' }}
         secondaryCta={{ label: 'Text 562-472-5246', href: 'sms:5624725246' }}
