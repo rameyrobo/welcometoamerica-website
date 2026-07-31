@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<rect x="0" y="0" width="64" height="64" rx="14" fill="#215E61"/>
+<g transform="translate(32,32) scale(1.0) translate(-32,-32)">
+<path fill="#FAF7F1" fill-rule="evenodd"
+      d="M14 45 V31 A18 18 0 0 1 50 31 V45 Z
+         M24 45 V31 A8 8 0 0 1 40 31 V45 Z"/>
+<rect x="8" y="45" width="48" height="7" rx="3.5" fill="#FAF7F1"/>
+</g></svg>
