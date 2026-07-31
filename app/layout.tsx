@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import PageTransition from '@/components/PageTransition'
+import Analytics from '@/components/Analytics'
 
 // Display font — warm editorial serif in the pairteam mold
 const fraunces = Fraunces({
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${fraunces.variable} ${sourceSans.variable}`}>
       <body className="bg-cream text-ink font-body antialiased">
+        <Analytics />
         {/* Skip to main content — keyboard accessibility */}
         <a
           href="#main-content"
