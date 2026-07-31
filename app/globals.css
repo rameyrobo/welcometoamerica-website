@@ -120,3 +120,27 @@
     @apply border-t border-sage/30 my-8 pt-8;
   }
 }
+
+
+/* ── Page transitions ─────────────────────────────────────────────────────
+   The house soft cross-fade (~180ms). Applied by components/PageTransition.tsx,
+   which re-keys on pathname so this animation restarts on every route change.
+
+   180ms + 4px of drift is deliberately just under the threshold where motion
+   becomes noticeable — it should feel like the page settled, not like it slid.
+
+   ⚠️ The reduced-motion block is NOT optional on these two sites. Immigration
+   and healthcare audiences skew older, and vestibular sensitivity is common.
+   Anyone with the OS setting on gets an instant page, which is the old behaviour. */
+.page-transition {
+  animation: page-fade 180ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes page-fade {
+  from { opacity: 0; transform: translate3d(0, 4px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition { animation: none; }
+}

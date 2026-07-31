@@ -3,6 +3,7 @@ import { Fraunces, Source_Sans_3 } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import PageTransition from '@/components/PageTransition'
 
 // Display font — warm editorial serif in the pairteam mold
 const fraunces = Fraunces({
@@ -69,7 +70,7 @@ export default function RootLayout({
         <Navbar />
 
         <main id="main-content" className="min-h-screen">
-          {children}
+          <PageTransition>{children}</PageTransition>
         </main>
 
         <Footer />

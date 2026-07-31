@@ -161,9 +161,16 @@ export default function HomePage() {
         <div className="section-wrapper">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden lg:sticky lg:top-28">
+              {/* ⚠️ Replaced 2026-07-31. The previous photo (1469571486292) was many
+                  hands painted bright RED — on an immigration nonprofit it read as
+                  blood, which is the last association this org needs. Ramey caught it.
+                  This is the stacked-hands photo already licensed and in use on
+                  /about: same "many people together" meaning, none of the alarm.
+                  NOTE: that means it now appears twice on the site. Swap this one
+                  for a hands-holding-a-seedling shot when we pick one. */}
               <Image
-                src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=80"
-                alt="Hands joined together in support"
+                src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1200&q=80"
+                alt="Many hands stacked together in support"
                 fill
                 className="object-cover"
                 sizes="(min-width: 1024px) 50vw, 100vw"
