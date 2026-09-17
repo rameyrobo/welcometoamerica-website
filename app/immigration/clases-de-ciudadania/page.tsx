@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
-import { ArrowRight, Languages } from 'lucide-react'
+import { Languages } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Clases de Ciudadanía (Citizenship Classes in Spanish)',
@@ -129,29 +129,6 @@ export default function ClasesCiudadaniaPage() {
                 <p className="text-ink/70 text-sm leading-relaxed">{tema.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Materiales USCIS ────────────────────────────────────────────────── */}
-      <section className="py-14" lang="es" aria-labelledby="materiales-heading">
-        <div className="section-wrapper max-w-3xl mx-auto">
-          <div className="bg-white border border-navy/15 rounded-xl p-7 shadow-sm">
-            <h2 id="materiales-heading" className="font-display text-2xl text-navy font-semibold mb-4">
-              Materiales de estudio oficiales del USCIS.
-            </h2>
-            <p className="text-ink/70 leading-relaxed mb-5">
-              El USCIS proporciona materiales de estudio gratuitos para el examen de
-              naturalización. Le recomendamos complementar nuestras clases con estos recursos:
-            </p>
-            <a
-              href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex"
-            >
-              Materiales Oficiales del USCIS <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
           </div>
         </div>
       </section>

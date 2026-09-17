@@ -52,7 +52,7 @@ const services = [
   {
     title: 'Medi-Cal & Medicare enrollment',
     description:
-      'Enrollment help for Medi-Cal, Medicare, IEHP, Molina, and Covered California — in English, Spanish, and Arabic, at no cost to you.',
+      'Enrollment help for Medi-Cal, Medicare, IEHP, Molina, and Covered California — in English and Spanish, at no cost to you.',
     href: '/medi-cal',
   },
   {
@@ -76,7 +76,7 @@ const pillars = [
   },
   {
     title: 'From the community, for the community',
-    body: 'As a 501(c)(3) community-based organization, we serve in English, Español, and العربية. Our community health workers and representatives live where you live.',
+    body: 'As a 501(c)(3) community-based organization, we serve in English and Español. Our community health workers and representatives live where you live.',
   },
   {
     title: 'Free and low-cost, always',
@@ -91,7 +91,7 @@ export default function HomePage() {
       <HeroSection
         badge="DOJ Recognized Organization · Nonprofit 501(c)(3) · Community Based"
         headline="Help for your whole journey."
-        subheadline="Immigration legal services, community health workers, and healthcare enrollment for Southern California — from a nonprofit your community already trusts. Free or low cost, in English, Español, and العربية."
+        subheadline="Immigration legal services, community health workers, and healthcare enrollment for Southern California — from a nonprofit your community already trusts. Free or low cost, in English and Español."
         primaryCta={{ label: 'Get Immigration Help', href: '/immigration' }}
         secondaryCta={{ label: 'Find a Health Worker', href: '/community-health' }}
         showPhone

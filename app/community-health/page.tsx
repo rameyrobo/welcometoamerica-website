@@ -5,7 +5,7 @@ import CTABanner from '@/components/CTABanner'
 export const metadata: Metadata = {
   title: 'Community Health Worker',
   description:
-    'Free Community Health Worker services with Medi-Cal. We help with Medi-Cal enrollment, healthcare navigation, immigration assistance, and more. English, Spanish, and Arabic speakers available.',
+    'Free Community Health Worker services with Medi-Cal. We help with Medi-Cal enrollment, healthcare navigation, immigration assistance, and more. English and Spanish speakers available.',
 }
 
 const chwServices = [
@@ -23,7 +23,7 @@ const chwServices = [
   },
   {
     title: 'Interpretation & translation',
-    body: 'We interpret between healthcare providers and patients, and between USCIS and applicants — English, Arabic, and Spanish speakers available.',
+    body: 'We interpret between healthcare providers and patients, and between USCIS and applicants — English and Spanish speakers available.',
   },
   {
     title: 'Wherever you are',
@@ -54,7 +54,6 @@ export default function CommunityHealthPage() {
         headline="A health worker in your corner, at no cost."
         subheadline="Healthy connections — a dedicated community health worker who helps you enroll, navigate, translate, and get care, every step of the way."
         primaryCta={{ label: 'Call CHW Support: 833-249-1563', href: 'tel:8332491563' }}
-        secondaryCta={{ label: 'Main Line: 844-982-6374', href: 'tel:8449826374' }}
         showPhone={false}
         imageUrl="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=75"
         imageAlt="Healthcare worker with patient"

@@ -97,7 +97,7 @@ export default function MedicarePage() {
             </p>
             <p>
               Welcome to America can help you understand your options, compare plans in your
-              area, and complete your enrollment — in English, Spanish, or Arabic.
+              area, and complete your enrollment — in English or Spanish.
             </p>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function MedicarePage() {
 
       <CTABanner
         heading="Enroll on time, stress free."
-        subtext="Call or text us today. Our team will help you choose the right plan and enroll on time — in English, Spanish, or Arabic."
+        subtext="Call or text us today. Our team will help you choose the right plan and enroll on time — in English or Spanish."
       />
     </>
   )

@@ -182,6 +182,15 @@ export default function Navbar() {
             >
               <MessageCircle className="size-3.5" aria-hidden="true" /> Text: 562-472-5246
             </a>
+            <span className="text-white/40 hidden sm:block">|</span>
+            <a
+              href="https://wa.me/15624725246"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 text-white font-semibold text-xs sm:text-sm hover:text-white/80 transition-colors"
+            >
+              <MessageCircle className="size-3.5" aria-hidden="true" /> WhatsApp: 562-472-5246
+            </a>
           </div>
         </div>
       </div>
@@ -340,6 +349,14 @@ export default function Navbar() {
                   className="flex items-center justify-center gap-2 px-4 py-3 border border-white/30 text-white/80 rounded text-sm"
                 >
                   <MessageCircle className="size-4" aria-hidden="true" /> Text: 562-472-5246
+                </a>
+                <a
+                  href="https://wa.me/15624725246"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 px-4 py-3 border border-white/30 text-white/80 rounded text-sm"
+                >
+                  <MessageCircle className="size-4" aria-hidden="true" /> WhatsApp: 562-472-5246
                 </a>
               </li>
             </ul>

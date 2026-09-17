@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
-import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Medi-Cal Enrollment',
@@ -19,14 +18,6 @@ const eligibleGroups = [
   'People with tuberculosis, breast cancer, or HIV/AIDS',
   'Foster care youth',
   'Low-income adults',
-]
-
-const immigrantCategories = [
-  'Lawful permanent residents (green card holders)',
-  'Lawful temporary residents',
-  'Refugees and asylees',
-  'Other humanitarian immigrants, including those with Temporary Protected Status (TPS)',
-  'Non-immigrant status holders (worker visas, student visas, and others)',
 ]
 
 const healthPlans = [
@@ -126,17 +117,8 @@ export default function MediCalPage() {
             Immigrants qualify, too.
           </h2>
           <p className="text-ink/75 leading-relaxed mb-6">
-            Many immigrants qualify for Medi-Cal. California has expanded eligibility to
-            include most immigrant categories. The following groups are generally eligible:
+            Many immigrants qualify for Medi-Cal. Call us and we will check your situation.
           </p>
-          <ul className="space-y-3">
-            {immigrantCategories.map((cat, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <Check className="size-4 text-sage shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
-                <span className="text-ink/80 leading-relaxed">{cat}</span>
-              </li>
-            ))}
-          </ul>
 
           {/* Children callout */}
           <div className="mt-8 bg-terracotta/10 border-l-4 border-terracotta rounded-r-xl p-5">

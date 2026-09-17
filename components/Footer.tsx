@@ -52,7 +52,7 @@ export default function Footer() {
                 <Check className="size-3.5" aria-hidden="true" /> Nonprofit 501(c)3
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs bg-white/10 text-white/90 px-3 py-1 rounded-full border border-white/20">
-                <Check className="size-3.5" aria-hidden="true" /> English / Español / العربية
+                <Check className="size-3.5" aria-hidden="true" /> English / Español
               </span>
             </div>
 
@@ -142,6 +142,22 @@ export default function Footer() {
                   <div>
                     <span className="block font-semibold text-white text-xs uppercase tracking-wide">
                       Text Us
+                    </span>
+                    562-472-5246
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/15624725246"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 text-white/70 hover:text-white transition-colors"
+                >
+                  <MessageCircle className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                  <div>
+                    <span className="block font-semibold text-white text-xs uppercase tracking-wide">
+                      WhatsApp
                     </span>
                     562-472-5246
                   </div>

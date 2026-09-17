@@ -50,6 +50,9 @@ export default function CTABanner({
           <a href={`sms:${textNumber}`} className="btn-outline-white min-w-[220px]">
             Text {formatPhone(textNumber)}
           </a>
+          <a href={`https://wa.me/1${textNumber}`} target="_blank" rel="noopener noreferrer" className="btn-outline-white min-w-[220px]">
+            WhatsApp {formatPhone(textNumber)}
+          </a>
         </div>
 
         {/* Secondary actions — appointments and payments */}
@@ -73,7 +76,7 @@ export default function CTABanner({
         </div>
 
         <p className="mt-10 text-white/50 text-sm font-body">
-          Available in English, Español, and العربية
+          Available in English and Español
         </p>
       </div>
     </section>

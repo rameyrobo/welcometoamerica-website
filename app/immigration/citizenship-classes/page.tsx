@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
-import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Citizenship Classes',
@@ -120,29 +119,6 @@ export default function CitizenshipClassesPage() {
                 <p className="text-ink/70 text-sm leading-relaxed">{topic.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── USCIS resources callout ───────────────────────────────────────── */}
-      <section className="py-14" aria-labelledby="resources-heading">
-        <div className="section-wrapper max-w-3xl mx-auto">
-          <div className="bg-white border border-navy/15 rounded-xl p-7 shadow-sm">
-            <h2 id="resources-heading" className="font-display text-2xl text-navy font-semibold mb-4">
-              Official USCIS study materials.
-            </h2>
-            <p className="text-ink/70 leading-relaxed mb-5">
-              USCIS provides free official study materials for the naturalization test. We
-              recommend supplementing our classes with these resources:
-            </p>
-            <a
-              href="https://www.uscis.gov/citizenship/find-study-materials-and-resources"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex"
-            >
-              USCIS Official Study Materials <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
           </div>
         </div>
       </section>

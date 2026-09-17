@@ -145,7 +145,7 @@ export default function GreenCardPage() {
 
       <CTABanner
         heading="Questions about your application?"
-        subtext="Our DOJ-authorized representatives are here to help. Call or text us today — services in English, Spanish, and Arabic."
+        subtext="Our DOJ-authorized representatives are here to help. Call or text us today — services in English and Spanish."
       />
     </>
   )
