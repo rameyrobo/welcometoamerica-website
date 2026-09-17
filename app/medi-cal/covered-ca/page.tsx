@@ -23,10 +23,8 @@ export default function CoveredCAPage() {
       <section className="py-16 bg-cream">
         <div className="section-wrapper max-w-3xl">
           <div className="bg-navy-800 rounded-2xl p-10 text-center">
-            <p className="text-white/80 font-body mb-6">
-              Call our Community Health Worker line.
-              <span className="block text-white/60 text-sm mt-1 italic">Llame a nuestra línea de promotores de salud.</span>
-            </p>
+            <h2 className="font-display text-3xl text-white font-medium mb-2">Call our Community Health Worker line.</h2>
+            <p className="text-white/60 font-body text-sm italic mb-6">Llame a nuestra línea de promotores de salud.</p>
             <a href="tel:8332491563" className="btn-primary">CHW Line: 833-249-1563</a>
           </div>
         </div>
