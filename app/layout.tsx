@@ -24,6 +24,8 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
+  // Search Console ownership (Ramey's Google account), verified via the Site Verification API
+  verification: { google: 'RZfYum476eovQO76ll7I0EM1X8qqc8wt_oVgJbkGDow' },
   metadataBase: new URL('https://www.welcometoamericaservices.com'),
   title: {
     default: 'Welcome to America Services | DOJ-Recognized Immigration & Health',
