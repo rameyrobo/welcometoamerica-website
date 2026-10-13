@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
+import IntroVideo from '@/components/IntroVideo'
 
 export const metadata: Metadata = {
   title: 'Community Health Worker',
@@ -58,6 +59,9 @@ export default function CommunityHealthPage() {
         imageUrl="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1800&q=75"
         imageAlt="Healthcare worker with patient"
       />
+
+      {/* ── Inez's welcome video, near the top per her 09-15 ask ─────────── */}
+      <IntroVideo />
 
       {/* ── What CHWs do — editorial list ─────────────────────────────────── */}
       <section className="py-20 sm:py-28" aria-labelledby="chw-heading">
