@@ -2,6 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
+import WelcomeVideoDialog from '@/components/WelcomeVideoDialog'
+import WelcomePlayer from '@/components/WelcomePlayer'
+import { MEDIA_BASE } from '@/lib/media'
 import CTABanner from '@/components/CTABanner'
 import { ArrowRight } from 'lucide-react'
 
@@ -95,8 +98,19 @@ export default function HomePage() {
         primaryCta={{ label: 'Get Immigration Help', href: '/immigration' }}
         secondaryCta={{ label: 'Find a Health Worker', href: '/community-health' }}
         showPhone
-        imageUrl="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1800&q=80"
-        imageAlt="Diverse community members together"
+        /* Mario's b-roll as a silent loop, plus the full welcome behind a Watch button
+           (Ramey 2026-10-18). It replaces the Unsplash crowd photo; the loop's poster is the
+           still that reduced-motion and Save-Data visitors see. */
+        backgroundVideo={{
+          src720: `${MEDIA_BASE}/video/inez-hero-loop-720.mp4`,
+          src1080: `${MEDIA_BASE}/video/inez-hero-loop-1080.mp4`,
+          poster: `${MEDIA_BASE}/video/inez-hero-loop-poster.jpg`,
+        }}
+        extra={
+          <WelcomeVideoDialog>
+            <WelcomePlayer />
+          </WelcomeVideoDialog>
+        }
       />
 
       {/* ── Statement intro — centered manifesto beat between the

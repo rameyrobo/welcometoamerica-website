@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
+import HeroVideoBackground from '@/components/HeroVideoBackground'
 
 interface HeroSectionProps {
   headline: string
@@ -11,6 +13,10 @@ interface HeroSectionProps {
   /** Optional image URL used as a full-bleed background with a dark wash. */
   imageUrl?: string
   imageAlt?: string
+  /** Silent looping background video (takes the place of imageUrl). Files live in R2. */
+  backgroundVideo?: { src720: string; src1080: string; poster: string }
+  /** Rendered under the CTAs, above the phone row (the home page's Watch button). */
+  extra?: ReactNode
 }
 
 /**
@@ -26,10 +32,21 @@ export default function HeroSection({
   badge,
   imageUrl,
   imageAlt = 'Community',
+  backgroundVideo,
+  extra,
 }: HeroSectionProps) {
   return (
     <section className="bg-navy-800 relative overflow-hidden" aria-labelledby="hero-headline">
-      {imageUrl && (
+      {backgroundVideo && (
+        <>
+          <HeroVideoBackground {...backgroundVideo} />
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-navy-900/95 via-navy-900/65 to-navy-900/40"
+            aria-hidden="true"
+          />
+        </>
+      )}
+      {!backgroundVideo && imageUrl && (
         <>
           <Image
             src={imageUrl}
@@ -80,6 +97,8 @@ export default function HeroSection({
               )}
             </div>
           )}
+
+          {extra && <div className="mb-10">{extra}</div>}
 
           {showPhone && (
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-white/70">
