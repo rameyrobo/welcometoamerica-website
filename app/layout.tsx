@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     description:
       'Free and low-cost immigration legal services, community health workers, and Medi-Cal enrollment. DOJ Recognized Nonprofit.',
   },
+  // the image is app/opengraph-image.tsx
+  twitter: { card: 'summary_large_image' },
 }
 
 export default function RootLayout({
