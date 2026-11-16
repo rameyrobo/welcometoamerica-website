@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 import { Languages } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/immigration/clases-de-ciudadania', {
   title: 'Clases de Ciudadanía (Citizenship Classes in Spanish)',
   description:
     'Clases gratuitas de ciudadanía y educación cívica para ayudarle a prepararse para la entrevista de naturalización del USCIS. Disponibles en español.',
-}
+})
 
 const temas = [
   {

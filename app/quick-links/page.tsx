@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import CTABanner from '@/components/CTABanner'
 import {
   BookOpen, ExternalLink, Flag, Landmark, MessageCircle, Phone, Stethoscope,
 } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/quick-links', {
   title: 'Quick Links — Immigration & Healthcare Resources',
   description:
     'Helpful links for immigration, citizenship, Medi-Cal, healthcare, and government benefits. Official resources from USCIS, DOJ, and California agencies.',
-}
+})
 
 const resourceCategories = [
   {

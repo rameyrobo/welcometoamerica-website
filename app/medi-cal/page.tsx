@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/medi-cal', {
   title: 'Medi-Cal Enrollment',
   description:
     'Get help enrolling in Medi-Cal, California\'s Medicaid health care program. Free enrollment assistance — we help determine your eligibility and complete your application.',
-}
+})
 
 const eligibleGroups = [
   'Families with children',

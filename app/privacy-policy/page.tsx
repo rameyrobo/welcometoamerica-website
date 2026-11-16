@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import { Check } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/privacy-policy', {
   title: 'Privacy Policy',
   description: 'Welcome to America Services privacy policy regarding the collection and use of personal information.',
-}
+})
 
 export default function PrivacyPolicyPage() {
   return (

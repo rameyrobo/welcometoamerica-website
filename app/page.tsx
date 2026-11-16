@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
@@ -8,11 +9,11 @@ import { MEDIA_BASE } from '@/lib/media'
 import CTABanner from '@/components/CTABanner'
 import { ArrowRight } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/', {
   title: 'Welcome to America Services | DOJ-Recognized Immigration & Community Health',
   description:
     'Free and low-cost immigration legal services, community health workers, and Medi-Cal enrollment. DOJ Recognized Nonprofit serving Southern California.',
-}
+})
 
 /* ── All nine services from the client's list — numbered, pairteam-style ── */
 const services = [

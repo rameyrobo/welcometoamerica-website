@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://welcometoamericaservices.com',
+    url: '/',
     siteName: 'Welcome to America Services',
     title: 'Welcome to America Services | DOJ-Recognized Immigration & Health',
     description:

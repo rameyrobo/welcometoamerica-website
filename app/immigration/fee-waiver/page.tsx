@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/immigration/fee-waiver', {
   title: 'Immigration Fee Waiver (Form I-912)',
   description:
     'Learn about fee waivers for USCIS immigration applications. We can help you determine eligibility and prepare your fee waiver request at no cost.',
-}
+})
 
 const qualifyingConditions = [
   {

@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/about', {
   title: 'About Us',
   description:
     'Welcome to America is a Department of Justice Recognized Nonprofit providing immigration legal services and healthcare enrollment across Southern California.',
-}
+})
 
 const credentials = [
   'Department of Justice Recognized Organization',

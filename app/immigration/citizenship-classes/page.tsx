@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/immigration/citizenship-classes', {
   title: 'Citizenship Classes',
   description:
     'Free citizenship and civics classes to help you prepare for the U.S. naturalization interview and test. Available in English and Spanish.',
-}
+})
 
 const classTopics = [
   {

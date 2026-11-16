@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 import { Check } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/immigration', {
   title: 'Immigration Legal Services',
   description:
     'DOJ-authorized immigration legal services including citizenship applications, green card assistance, fee waivers, and representation at DHS. Free and low-cost.',
-}
+})
 
 const eligibilityRequirements = [
   'Be at least 18 years old when submitting the application',

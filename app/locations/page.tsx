@@ -1,15 +1,16 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import CTABanner from '@/components/CTABanner'
 import {
   ArrowRight, Building2, CalendarDays, HeartPulse, Hospital,
   Mail, MapPin, MessageCircle, Phone, Video, Waves,
 } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/locations', {
   title: 'Locations',
   description:
     'Welcome to America Services locations in Hesperia and Long Beach, CA. By appointment only. Services also available by phone, Zoom, and virtually.',
-}
+})
 
 const locations = [
   {

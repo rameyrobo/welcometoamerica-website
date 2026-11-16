@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/disclaimer', {
   title: 'Disclaimer',
   description: 'Important disclaimer regarding the services provided by Welcome to America Services.',
-}
+})
 
 export default function DisclaimerPage() {
   return (

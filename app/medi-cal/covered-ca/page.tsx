@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/medi-cal/covered-ca', {
   title: 'Covered California',
   description:
     'Covered California help from Welcome to America. Call our Community Health Worker line at 833-249-1563.',
-}
+})
 
 export default function CoveredCAPage() {
   return (

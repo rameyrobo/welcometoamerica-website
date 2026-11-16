@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
+import { withSeo } from '@/lib/seo'
 import HeroSection from '@/components/HeroSection'
 import CTABanner from '@/components/CTABanner'
 import IntroVideo from '@/components/IntroVideo'
 
-export const metadata: Metadata = {
+export const metadata: Metadata = withSeo('/community-health', {
   title: 'Community Health Worker',
   description:
     'Free Community Health Worker services with Medi-Cal. We help with Medi-Cal enrollment, healthcare navigation, immigration assistance, and more. English and Spanish speakers available.',
-}
+})
 
 const chwServices = [
   {
