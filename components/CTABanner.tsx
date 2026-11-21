@@ -15,7 +15,7 @@ interface CTABannerProps {
  * Statement CTA (pairteam's "Here to support you." pattern):
  * one deep-navy closing section per page with a huge serif headline
  * and every action in one place — call, text, book, pay.
- * This replaces the old stacked CTABanner + PageCTAButtons duo.
+ * This replaced the old stacked CTABanner + PageCTAButtons duo (PageCTAButtons deleted 2026-11-20).
  */
 export default function CTABanner({
   heading,
@@ -57,13 +57,17 @@ export default function CTABanner({
 
         {/* Secondary actions — appointments and payments */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-x-8 gap-y-3">
+          {/* Inez 2026-11-20: Calendly → her Microsoft Bookings page ("Immigration Legal Consultation /
+              Consulta Legal de Inmigracion", 30 min). Opens without a Microsoft account ("Continue as guest").
+              The old label listed "phone, Zoom, or in person"; the Bookings page offers no such choice, so it
+              says only what the link does. */}
           <a
-            href="https://calendly.com/welcometoamericacalendar"
+            href="https://bookings.cloud.microsoft/bookwithme/user/4aea79ff973446b28dda305cf054e0fc@welcometoamericaservices.com/meetingtype/Gi8GOFAb8UaCdYhVBMRfKw2?anonymous&ismsaljsauthenabled"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body font-semibold text-white/85 underline decoration-white/30 underline-offset-4 hover:decoration-white transition-all"
           >
-            Book an appointment — phone, Zoom, or in person <ArrowRight className="inline size-4 -mt-0.5" aria-hidden="true" />
+            Book an appointment <ArrowRight className="inline size-4 -mt-0.5" aria-hidden="true" />
           </a>
           <a
             href="https://secure.lawpay.com/pages/welcometoamericaservice/operating"
